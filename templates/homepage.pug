@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himalaya Shopping</title>
+    <link rel="stylesheet" href="static/homepage.css">
+    <link rel="stylesheet" href="static/navbar.css">
+    <script src="/static/script.js"></script>
+    <script src="/script.js"></script>
+</head>
+
+<body>
+include ./partials/header.pug
+    <div id="courusel">
+        <div class="slider">
+            <div class="images">
+                <input type="radio" name="slide" id="img1" checked>
+                <input type="radio" name="slide" id="img2">
+                <input type="radio" name="slide" id="img3">
+                <img src="static/images/pic1.jpg" id="img1" alt="img1">
+                <img src="static/images/pic2.jpg" id="img2" alt="img2">
+                <img src="static/images/pic3.jpg" id="img3" alt="img3">
+            </div>
+            <div class="couruselLabels">
+                <label for="img1"></label>
+                <label for="img2"></label>
+                <label for="img3"></label>
+            </div>
+        </div>
+    </div>
+    <div class="temp" style="text-align: center;font-size: 50px;margin: 10px 5px;background-color: #fff;">Some of Are Products</div>
+    <div id="cardscontainer">
+        each details in data
+            <div class="cards">
+                <div class="cardimg">
+                    <img src="static/images/m20.jpg" alt="Phones">
+                </div>
+                <div class="cardinfo">
+                    <span><a href="#">#{details.pdt_name}</a></span>
+                    <span class="price"> <sup>₹</sup>#{details.price}</span>
+                    <span>#{details.availablity}</span>
+                </div>
+            </div>
+    </div>
+
+</body>
+
+</html>

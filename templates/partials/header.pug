@@ -1,0 +1,147 @@
+<header id="header">
+    <div id="head">
+        <div id="slidebar" onclick="openNavbar()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div id="heading">
+            <i class="fas fa-shopping-bag"></i>
+            <h1><a href="/"> Himalaya Shopping</a></h1>
+        </div>
+        <div id="searchdiv">
+            <input type="search" name="search" id="search" placeholder="Enter here">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+        <div id="loginarea">
+            <a id="cartbtn"><i class="fas fa-shopping-cart"> Cart</i></a>
+            if user==null
+                <button id="loginbtn"><a href="/login">Log In</a></button>
+            else
+                <div id="account" onclick="acOptions()">
+                    <i class="fas fa-user"></i>#{username}
+                    <div id="acOptions">
+                        <li><a href="/account">Your Account</a></li>
+                        <li><a href="/logout">Log Out</a></li>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <nav id="navbar">
+        <div id="exitnav" onclick="hidenavbar()">
+            <i class="fas fa-times"></i>
+        </div>
+        <h1>Categories</h1>
+        <ul id="mainmenu">
+            <li class="items">Electronics<i class="fas fa-caret-down"></i>
+                <ul class="submenu" id="temp">
+                    <li class="subitems">Phones Accessories
+                        <ul class="subsubmenu">
+                            <li class="subsubitems">Mobiles</li>
+                            <li class="subsubitems">chargers</li>
+                            <li class="subsubitems">smartphones</li>
+                            <li class="subsubitems">wireles products</li>
+                            <li class="subsubitems">chargers</li>
+                        </ul>
+                    </li>
+                    <li class="subitems">Laptops accsesories
+                        <ul class="subsubmenu">
+                            <li class="subsubitems">Mobiles</li>
+                            <li class="subsubitems">chargers</li>
+                            <li class="subsubitems">smartphones</li>
+                            <li class="subsubitems">wireles products</li>
+                        </ul>
+                    </li>
+                    <li class="subitems">Appliences
+                        <ul class="subsubmenu">
+                            <li class="subsubitems">Mobiles</li>
+                            <li class="subsubitems">chargers</li>
+                            <li class="subsubitems">smartphones</li>
+                            <li class="subsubitems">wireles products</li>
+                        </ul>
+                    </li>
+                    <li class="subitems">Kitchen Apliences
+                        <ul class="subsubmenu">
+                            <li class="subsubitems">Mobiles</li>
+                            <li class="subsubitems">chargers</li>
+                            <li class="subsubitems">smartphones</li>
+                            <li class="subsubitems">wireles products</li>
+                        </ul>
+                    </li>
+                    <li class="subitems">TeleVisions
+                        <ul class="subsubmenu">
+                            <li class="subsubitems">Mobiles</li>
+                            <li class="subsubitems">chargers</li>
+                            <li class="subsubitems">smartphones</li>
+                            <li class="subsubitems">wireles products</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </li>
+            <li class="items">Mens<i class="fas fa-caret-down"></i>
+                <ul class="submenu">
+                    <li class="subitems">Phones</li>
+                    <li class="subitems">Laptops accsesories
+                        <ul class="subsubmenu">
+                            <li class="subsubitems">Mobiles</li>
+                            <li class="subsubitems">chargers</li>
+                            <li class="subsubitems">smartphones</li>
+                            <li class="subsubitems">wireles products</li>
+                        </ul>
+                    </li>
+                    <li class="subitems">Appliences</li>
+                    <li class="subitems">Kitchen Apliences</li>
+                    <li class="subitems">TeleVisions</li>
+                </ul>
+            </li>
+            <li class="items">Womens<i class="fas fa-caret-down"></i>
+                <ul class="submenu">
+                    <li class="subitems">Phones</li>
+                    <li class="subitems">Laptops accsesories</li>
+                    <li class="subitems">Appliences</li>
+                    <li class="subitems">Kitchen Apliences</li>
+                    <li class="subitems">TeleVisions</li>
+                    <li class="subitems">Laptops accsesories</li>
+                    <li class="subitems">Appliences</li>
+                    <li class="subitems">Kitchen Apliences</li>
+                    <li class="subitems">TeleVisions</li>
+                </ul>
+            </li>
+            <li class="items">Sports<i class="fas fa-caret-down"></i>
+                <ul class="submenu">
+                    <li class="subitems">Phones</li>
+                    <li class="subitems">Laptops accsesories</li>
+                    <li class="subitems">Appliences</li>
+                    <li class="subitems">Kitchen Apliences</li>
+                    <li class="subitems">TeleVisions</li>
+                </ul>
+            </li>
+            <li class="items">Books<i class="fas fa-caret-down"></i>
+                <ul class="submenu">
+                    <li class="subitems">Phones</li>
+                    <li class="subitems">Laptops accsesories</li>
+                    <li class="subitems">Appliences</li>
+                    <li class="subitems">Kitchen Apliences</li>
+                    <li class="subitems">TeleVisions</li>
+                </ul>
+            </li>
+            <li class="items">Books<i class="fas fa-caret-down"></i>
+                <ul class="submenu">
+                    <li class="subitems">Phones</li>
+                    <li class="subitems">Laptops accsesories</li>
+                    <li class="subitems">Appliences</li>
+                    <li class="subitems">Kitchen Apliences</li>
+                    <li class="subitems">TeleVisions</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+if notify==true
+    <div class="notification" id="notification">
+        <div class="message">
+            |#{notificationMessage}
+        </div>
+        <div class="hideNotification" onclick="hidenotification()">
+            <i class="fas fa-times"></i>
+        </div>
+    </div>

@@ -1,0 +1,223 @@
+#forms{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:25px 10px ;
+}
+#loginBox{
+    border: 2px solid aqua;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    height: 500px;
+    box-shadow: 10px 10px 10px gray;
+    overflow: hidden;
+}
+
+.loginimageBox img{
+    width: 300px;
+    height: 500px;
+}
+#loginform{
+    width: 500px;
+    height: 500px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+#loginform h1{
+    text-align: center;
+    margin: 20px 0px;
+    font-size: 50px;
+}
+#loginform form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.input{
+    margin: 10px 10px;
+    width: 380px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 18px;
+    text-align: center;
+    transition: all 1s;
+}
+#loginform input[type=submit]{
+    width: 150px;
+    font-size: 20px;
+    padding: 10px 0px;
+    border-radius: 30px;
+    margin: 10px 0px;
+    background-color: aqua;
+    cursor: pointer;
+    transition: all 1s;
+}
+#loginform input[type=submit]:hover{
+    width: 200px;
+    background-color: rgb(52, 179, 238);
+}
+.input:hover,.input:focus{
+    width: 450px;
+    box-shadow: 0px 0px 5px 5px rgb(143, 143, 143);
+}
+#loginform h4{
+    font-size: 20px;
+    margin-top: 30px;
+}
+#registerBox{
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    display: none;
+    justify-content: center;
+    width: 900px;
+    height: 600px;
+    box-shadow: 10px 10px 10px gray;
+    overflow: hidden;
+
+}
+.registerimageBox img{
+    width: 300px;
+    height: 600px;
+    overflow: hidden;
+
+}
+#registerform{
+    width: 600px;
+    height: 600px;
+    background-color: rgb(127 237 255);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#registerform h1{
+    text-align: center;
+    margin: 20px 0px;
+    font-size: 40px;
+}
+#registerform form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+#registerform input[type=submit]{
+    width: 150px;
+    font-size: 20px;
+    padding: 10px 0px;
+    border-radius: 30px;
+    margin: 10px 0px;
+    background-color: aqua;
+    cursor: pointer;
+}
+#registerform input[type=submit]:hover{
+    width: 200px;
+    background-color: rgb(52, 179, 238);
+}
+
+#registerform h4{
+    font-size: 20px;
+    margin-top: 30px;
+}
+#registerform p{
+    position: relative;
+    left: -40px;
+    top: -10px;
+}
+#signup a{
+    color: blue;
+}
+#signup a:hover{
+    color: rgb(243, 35, 156);
+    text-decoration: underline;
+}
+@media (max-width:700px)
+{
+    #loginBox{
+        width: 400px;
+        height: 250px;
+    }
+    
+    .loginimageBox img{
+        width: 120px;
+        height: 250px;
+    }
+    #loginform{
+        width: 280px;
+        height: 250px;
+    }
+    #loginform h1{
+        margin: 20px 0px;
+        font-size: 25px;
+    }
+    .input{
+        margin: 3px 5px;
+        width: 180px;
+        padding: 10px 15px;
+        font-size: 10px;
+        border-radius: 15px;
+    }
+    #loginform input[type=submit]{
+        width: 75px;
+        font-size: 10px;
+        padding: 5px 0px;
+        border-radius: 20px;
+        margin: 5px 0px;
+    }
+    #loginform input[type=submit]:hover{
+        width: 100px;
+    }
+    .input:hover,.input:focus{
+        width: 200px;
+    }
+    #loginform h4{
+        font-size: 10px;
+        margin-top: 10px;
+    }
+    #registerBox{
+        width: 450px;
+        height: 400px;
+    
+    }
+    .registerimageBox img{
+        width: 120px;
+        height: 400px;
+    
+    }
+    #registerform{
+        width: 330px;
+        height: 400px;
+    }
+    #registerform h1{
+        margin: 5px 0px;
+        font-size: 20px;
+    }
+    #registerform input[type=submit]{
+        width: 75px;
+        font-size: 10px;
+        padding: 10px 0px;
+        margin: 10px 0px;
+    }
+    #registerform input[type=submit]:hover{
+        width: 100px;
+    }
+    
+    #registerform h4{
+        font-size: 10px;
+        margin-top: 20px;
+    }
+    #registerform p{
+        font-size: 10px;
+        left: 0px;
+        top: 0px;
+        z-index: 5;
+    }
+}

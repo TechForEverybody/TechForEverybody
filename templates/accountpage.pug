@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Page</title>
+    <link rel="stylesheet" href="/static/accountpage.css">
+    <link rel="stylesheet" href="/static/navbar.css">
+        <script src="/static/script.js"></script>
+</head>
+
+<body>
+include ./partials/header.pug
+    <div id="accountdetails">
+        <div class="containerac">
+            <div id="optionsac">
+                <li onclick="accounttoggle('profiledetail')"><i class="fas fa-user"></i> Profile</li>
+                <li onclick="accounttoggle('addressdetails')"><i class="fas fa-address-card"></i>Address</li>
+                <li><i class="fas fa-cart-plus"></i> Your Orders</li>
+            </div>
+            <div id="detailsac">
+                <div id="profiledetail">
+                    <h1>Profile Details</h1>
+                    <div id="profilecontent">
+                    <div id="name">Name : <span>#{details.name}</span>
+                    </div>
+                    <div id="email">Email :<span>#{details.email}</span>
+                    </div>
+                    <div id="number">Number :<span>#{details.number}</span>
+                    </div>
+                    </div>
+                </div>
+                <div id="addressdetails">
+                    <h1>Address Details</h1>
+                    <div id="addresscontent">
+                        <div id="main_address">Address : <span>
+                        if details.address==null
+                            |not updated
+                        else
+                            |#{details.address}</span>
+                        </div>
+                        <div id="address_pincode">Pincode :<span>
+                        if details.pincode==0
+                            |not updated
+                        else
+                            |#{details.pincode}</span>
+                        </div>
+                        <span>Wanted to update address  <a href="#" onclick="changeaddressform()">Change Address</a></span>
+                    </div>
+                </div>
+                <div id="editaddressdetails">
+                    <h1>Update Address Details</h1>
+                    <form id="editaddresscontent" action="/updateaddress" method="POST">
+                        <textarea name="address" id="address" placeholder="Enter Your Address" required></textarea>
+                        <input type="number" name="pincode" id="pincode" placeholder="Enter Your pincode" required>
+                        <div>
+                        <input type="submit" value="Update">
+                        <button id="cancelbtn" onclick="hideaddressform()">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Registration</title>
+    <link rel="stylesheet" href="/static/navbar.css">
+    <link rel="stylesheet" href="/static/loginpage.css">
+    <script src="/static/script.js"></script>
+</head>
+
+<body>
+include ./partials/header.pug
+    <div id="forms">
+        <div id="loginBox">
+            <div class="loginimageBox">
+                <img src="static/images/login.jpg">
+            </div>
+            <div id="loginform">
+                <h1>Login Form</h1>
+                <form action="/login" method="POST">
+                    <input class="input" type="email" name="email" id="loginemail" placeholder="Enter Email" required>
+                    <input class="input" type="password" name="password" id="loginpasswprd" placeholder="Enter Password" required>
+                    <input type="submit" value="Login">
+                    <h4 id="signup">Dont`h have an Account  <a href="#" onclick="swap()">Register here</a></h4>
+                </form>
+            </div>
+        </div>
+        <div id="registerBox">
+            <div class="registerimageBox">
+                <img src="static/images/registration.jpg">
+            </div>
+            <div id="registerform">
+                <h1>Registration Form</h1>
+                <form action='/register' method="POST">
+                    <input class="input" type="text" name="name" id="name" placeholder="Enter Your Name" required>
+                    <input class="input" type="email" name="email" id="loginemail" placeholder="Enter Email" required>
+                    <input class="input" type="number" name="phone" id="phoneNumber" placeholder="Enter Your Number" required>
+                    <input class="input" type="password" name="password" id="loginpasswprd" pattern=".{10,}" placeholder="Enter Password" required>
+                    <p>Password must contains 10 or more characters</p>
+                    <input class="input" type="submit" value="Register">
+                    <h4 id="signup">Already have an Account  <a href="#" onclick="swap()">login here</a></h4>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
