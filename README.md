@@ -1,14 +1,18 @@
 # **<ins><div align="center">Hey 👋, I'm Shivkumar Chauhan</div></ins>**  
   
 
-
-
 ### Links  
 <a href="https://github.com/TechForEverybody" target="_blank">
 <img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
 </a>
 <a href="https://linkedin.com/in/shiva995" target="_blank">
 <img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
+</a>  
+<a href="https://sksinghat95.hackerresume.io/3df0b354-5c96-4786-8a56-7789480c7c70" target="_blank">
+<img src=https://img.shields.io/badge/resume-%23FFFB5.svg?&style=for-the-badge&logo=hackerrank&logoColor=green alt=linkedin style="margin-bottom: 5px;" />
+</a>  
+<a href="https://www.hackerrank.com/Shiva995?hr_r=1" target="_blank">
+<img src=https://img.shields.io/badge/hackerrank-%231EFFB5.svg?&style=for-the-badge&logo=hackerrank&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
 </a>  
   
 
@@ -49,9 +53,9 @@ I have done one internship, in which I have created websites from scratch using 
 ⚡ Fun fact is I am a fan of Astronomy  
 
 
-</td><td valign="top" width="50%">
+</td><td valign="center" width="50%">
 
-<img src="https://miro.medium.com/max/800/0*XH3rLskyOsCqVV-j.jpg" align="left" style="width: 100%" />  
+<img src="https://miro.medium.com/max/800/0*XH3rLskyOsCqVV-j.jpg" align="center" style="width: 95%" />  
 
 
 </td></tr></table>  
@@ -93,4 +97,5 @@ I have done one internship, in which I have created websites from scratch using 
 <a href="https://www.arduino.cc/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/arduino.png" alt="Arduino" height="50" /></a>  
 </div>  
 
-<br/>  
+<br/>
+<hr/>
