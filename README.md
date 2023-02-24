@@ -32,7 +32,7 @@ I have done one internship, in which I have created websites from scratch using 
 ## Rapidfire  
 
 
-<img src="https://miro.medium.com/max/800/0*XH3rLskyOsCqVV-j.jpg" align="center" style="width: 75%;margin: auto;" />  
+<img src="https://miro.medium.com/max/800/0*XH3rLskyOsCqVV-j.jpg" align="center" style="width: 99%;margin: auto;" />  
 
 
 🔭 I’m currently working on Data Mining  
