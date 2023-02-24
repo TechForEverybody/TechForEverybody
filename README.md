@@ -47,7 +47,7 @@ I have done one internship, in which I have created websites from scratch using 
 💬 Ask me about React, Python, Java, JavaScript, C, Machine/Deep Learning, MERN Stack  
   
 
-👨‍💻 All of my projects are available at https://shivkumar-portfolio-5b170.web.app/  
+👨‍💻 All of my projects are available at [ My Portfolio ](https://portfolio.techforeverybody.live/)
   
 
 ⚡ Fun fact is I am a fan of Astronomy  
