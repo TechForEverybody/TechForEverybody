@@ -32,7 +32,7 @@ I am a final year student and working in web development field from 2 years. I h
   
 💬 Ask me about React, Python, Java, JavaScript, C, Machine/Deep Learning, MERN Stack  
   
-👨‍💻 All of my projects are available at [https://shivkumar-portfolio-5b170.web.app/  ](https://portfolio.techforeverybody.live/)
+👨‍💻 All of my projects are available at [My Portfolio](https://portfolio.techforeverybody.live/)
   
 ⚡ Fun fact is I am a fan of Astronomy  
 
