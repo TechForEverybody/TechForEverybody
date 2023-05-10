@@ -1,0 +1,189 @@
+.HomeFrontContainer {
+	min-height: 100vh;
+	background: url("../../../Assets/Images/Home1.jpg") no-repeat;
+	background-size: cover;
+	max-width: 85%;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	.HomeFrontContainerText {
+		h1 {
+			font-size: 4em;
+		}
+	}
+}
+
+.AboutContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 40vh;
+	padding: 20px;
+	// background: blue;
+	border: 1px solid gray;
+	max-width: 90%;
+	margin: 20px auto;
+	> p {
+		// max-width: 65%;
+		// text-align: center;
+		font-size: 25px;
+		padding: 10px;
+	}
+	.education {
+		font-size: 35px;
+		padding: 30px;
+		border-right: 1px solid gray;
+
+		.thingscounts {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			.count {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				border: 1px solid gray;
+				padding: 10px;
+				margin: 10px;
+				width: 300px;
+				font-size: 0.8em;
+				text-align: center;
+				background: blue;
+				color: white;
+				cursor: pointer;
+			}
+			.count:hover {
+				transform: scale(1.1);
+			}
+
+			.count img {
+				width: 80px;
+			}
+		}
+	}
+}
+
+.ReferencesContainer {
+	max-width: 60%;
+	border: 1px solid gray;
+	margin: 20px auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding: 10px;
+	.languageReferences {
+		li {
+			list-style: circle;
+            margin-left: 20px;
+		}
+	}
+    .resourcesReferences{
+		margin: 10px;
+        li{
+
+            list-style:decimal;
+        }
+    }
+}
+
+.dark {
+	.HomeFrontContainer {
+		background: url("../../../Assets/Images/Home2.jpg") no-repeat;
+	}
+
+	.AboutContainer {
+		background-color: #162a40;
+	}
+
+	.FieldsOfWork {
+		.FieldCard {
+			background: #162a40;
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.dark .HomeFrontContainer {
+		max-width: 100%;
+		background: url("../../../Assets/Images/Home3.jpg") no-repeat;
+		background-size: cover;
+	}
+	.HomeFrontContainer {
+		max-width: 100%;
+		background: url("../../../Assets/Images/Home4.jpg") no-repeat;
+		background-size: cover;
+	}
+	.AboutContainer {
+		display: flex;
+		flex-direction: column;
+		margin: 5px;
+		max-width: 100%;
+		.education {
+			font-size: 25px;
+			border: none;
+
+			.thingscounts {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+
+			.count {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				border: 1px solid gray;
+				padding: 10px;
+				margin: 10px;
+				width: 300px;
+			}
+
+			.count img {
+				width: 80px;
+			}
+		}
+		> p {
+			font-size: 20px;
+			padding: 5px 1px;
+		}
+	}
+    .ReferencesContainer {
+        max-width: 90%;
+    }
+}
+
+.FieldsOfWork {
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	flex-wrap: wrap;
+
+	.FieldCard {
+		border: 1px solid gray;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: 20px;
+		margin: 20px;
+		// background-color: blue;
+		img {
+			width: 300px;
+			// height: 300px;
+		}
+		.workExamples {
+			width: 100%;
+			padding: 10px;
+			li {
+				background: blue;
+				text-align: center;
+				padding: 5px;
+				margin: 5px;
+				color: white;
+				text-decoration: underline;
+			}
+		}
+	}
+}

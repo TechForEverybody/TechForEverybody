@@ -1,0 +1,64 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	color: inherit;
+	background: transparent;
+	list-style: none;
+	text-decoration: none;
+	transition: all .3s ;
+	word-wrap: break-word;
+	position: relative;
+	font-family: "Barlow Semi Condensed", sans-serif;
+	text-align: inherit;
+}
+body {
+	min-height: 100vh;
+	background: mintcream;
+	background-size: cover;
+	color: black;
+	text-align: justify;
+}
+
+.dark {
+	background: black !important;
+	color: white !important;
+}
+
+.dark *{
+	box-shadow: none !important;
+}
+
+
+@media screen and (max-width: 768px) {
+
+}
+
+button,
+span,
+a,
+li,
+label,
+svg,
+i,
+img{
+	cursor: pointer;
+}
+
+hr {
+	width: 98%;
+	border: 1px solid black;
+	margin: 10px auto;
+}
+.dark hr{
+	border-color: white;
+}
+
+sup{
+    font-size: 8px;
+    color: gray;
+    border: 1px solid gray;
+    padding: 0 2px;
+}

@@ -1,0 +1,84 @@
+[
+	{
+		"image": "https://images.saymedia-content.com/.image/t_share/MTc0NTEwODM4NTk2NzczODc4/full-stack-web-development-are-you-a-game-for-this.jpg",
+		"name": "Full Stack Development",
+		"workExamples": {
+			"Discussion-Forum": "https://characterpointerforum.000webhostapp.com/",
+            "E-Commerce": "https://github.com/Shiva3142/Himalaya-Shopping",
+            "File-Upload Platform": "https://filepointer.000webhostapp.com/",
+            "Covid-19 cases and ICU requirement prediction using Machine Learning": "https://github.com/Shiva3142/Covid19_Data_Analysis_and_Prediction",
+            "Text Sentiment Analysis System": "https://github.com/Shiva3142/Text_Sentiment_Analysis_System"
+		}
+	},
+	{
+		"image": "https://www.multirecruit.com/wp-content/uploads/2022/05/web-development-1-1.png",
+		"name": "Web Development",
+		"workExamples": {
+			"Discussion-Forum": "https://characterpointerforum.000webhostapp.com/",
+            "E-Commerce": "https://github.com/Shiva3142/Himalaya-Shopping",
+            "File-Upload Platform": "https://filepointer.000webhostapp.com/",
+            "Thoughts Posting Platform": "https://github.com/Shiva3142/MERNG_Application",
+            "Job-Engagement Platform": "https://job-engagement-platform.000webhostapp.com/",
+            "Color Pallete Site":"https://rangs.techforeverybody.live/",
+            "Math Helper":"https://calculations.techforeverybody.live/",
+            "Text Helper":"https://textoperations.techforeverybody.live/"
+		}
+	},
+	{
+		"image": "https://www.door3.com/uploads/front-end-development-best-practices-and-trends.svg",
+		"name": "Front-End Development",
+		"workExamples": {
+            "Portfolio Site":"https://portfolio.techforeverybody.live/",
+			"Color Pallete Site":"https://rangs.techforeverybody.live/",
+            "Internship-work-1":"https://business-app-frontend-5a2c4.web.app/",
+            "Internship-work-2":"https://business-app-frontend-5a2c4.web.app/",
+            "Internship-work-3":"https://smecredit-app.web.app/",
+            "Internship-work-4":"https://equippp-site.web.app/",
+            "Internship-work-5":"https://business-app-frontend-5a2c4.web.app/",
+            "Career Guidance Site":"https://careerguidancesite.000webhostapp.com/",
+            "Job-Engagement Platform": "https://job-engagement-platform.000webhostapp.com/"
+		}
+	},
+	{
+		"image": "https://epnovate.com/wp-content/uploads/2020/08/back-end-development-it-concept_126283-67.png",
+		"name": "Back-End Development",
+		"workExamples": {
+            "File-Upload Platform": "https://filepointer.000webhostapp.com/",
+            "E-Commerce": "https://github.com/Shiva3142/Himalaya-Shopping",
+            "Thoughts Posting Platform": "https://github.com/Shiva3142/MERNG_Application",
+			"Discussion-Forum": "https://characterpointerforum.000webhostapp.com/",
+            "Job-Engagement Platform": "https://job-engagement-platform.000webhostapp.com/",
+            "Gupshup-chatroom":"https://github.com/Shiva3142/PHP_Chatting_room"
+		}
+	},
+	{
+		"image": "https://builtin.com/sites/www.builtin.com/files/styles/og/public/2021-12/machine-learning-examples-applications.png",
+		"name": "Machine Learning",
+		"workExamples": {
+            "Text Sentiment Analysis System": "https://github.com/Shiva3142/Text_Sentiment_Analysis_System",
+            "Image Based Emotion Detection System":"https://github.com/Shiva3142/Facial_Expression_Sentiment_Analysis_System",
+            "Audio Tone Based Emotion Detection System":"https://github.com/Shiva3142/Speech_Sentiment_Analysis_System",
+            "Skin Disease Detection System":"https://github.com/Shiva3142/Skin_Disease_Detection"
+		}
+	},
+	{
+		"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3G0UHQnpnoTDaCQoZNSgzjRR9ckryVRxtCQ&usqp=CAU",
+		"name": "Data Science",
+		"workExamples": {
+            "Covid-19 cases and ICU requirement prediction using Machine Learning": "https://github.com/Shiva3142/Covid19_Data_Analysis_and_Prediction",
+            "IDBI Bank Mini Statement Analysis":"https://github.com/TechForEverybody/IDBI_Bank_Mini_Statement_Analysis",
+            "Chatbot for querying college facilities in hindi language an NLP Application":"https://github.com/TechForEverybody/Chatbot_for_querying_college_facilities_in_hindi_language_an_NLP_Application"
+		}
+	},
+	{
+		"image": "https://www.opensourceforu.com/wp-content/uploads/2021/12/Database-featured-image.png",
+		"name": "Database Management",
+		"workExamples": {
+            "E-Commerce": "https://github.com/Shiva3142/Himalaya-Shopping",
+            "Thoughts Posting Platform": "https://github.com/Shiva3142/MERNG_Application",
+			"Discussion-Forum": "https://characterpointerforum.000webhostapp.com/",
+            "Job-Engagement Platform": "https://job-engagement-platform.000webhostapp.com/",
+            "Gupshup-chatroom":"https://github.com/Shiva3142/PHP_Chatting_room"
+		}
+	}
+]
