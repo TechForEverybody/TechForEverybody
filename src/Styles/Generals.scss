@@ -64,3 +64,80 @@
     width: 100vw;
     z-index: 11;
 }
+
+
+
+
+#animation{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(128, 128, 128, 0.663);
+    .sun{
+        position: absolute;
+        bottom: 0;
+        // right: ;
+        background-color: yellow;
+        height: 10vh;
+        width: 10vh;
+        border-radius: 50%;
+        animation: sun 0.3s linear 1;
+        transform: translate(0,50%);
+        background:rgb(255, 238, 0);
+        box-shadow: 0 0 10px rgb(255, 230, 0),
+                      0 0 60px rgb(255, 208, 0),
+                      0 0 200px yellow,
+                      inset 0 0 80px yellow;
+    }
+    .moon{
+        height: 40vw;
+        width: 40vw;
+        border-radius: 50%;
+        background-color: white;
+        box-shadow: 0 0 100px 20px rgb(255, 255, 255) !important;
+        animation: moon 0.3s linear 1;
+        position: absolute;
+        left: 0;
+        // top: 40%;
+        z-index: 200;
+    }
+}
+
+
+@keyframes sun{
+    0%{
+        height: 10vh;
+        width: 10vh;
+    }
+    50%{
+        height: 300vh;
+        width: 300vh;    
+    }
+    100%{
+        height: 500vh;
+        width: 500vh;
+    }
+}
+
+@keyframes moon{
+    0%{
+        left: 0%;
+    }
+    50%{
+        left: 50%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+
+
+
+

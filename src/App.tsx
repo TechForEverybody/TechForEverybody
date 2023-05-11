@@ -1,14 +1,20 @@
 import './App.css';
 import './Styles/index.scss';
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import ErrorPage from './Components/Templates/ErrorPage';
 import Home from './Components/Home/Home';
 
+import { languageInitialState, updateLanguage, LanguageContext } from './Contexts/LanguageContext'
+import { createContext, useReducer } from 'react';
+
+let languageContext = createContext<LanguageContext | null>(null)
+
 function App() {
+    let [language, updateLanguageState] = useReducer(updateLanguage, languageInitialState);
     return (<>
-    
-                <Routes>
-                    <Route path="/" element={<Home/>}/>
+        <languageContext.Provider value={{ language, updateLanguageState }}>
+            <Routes>
+                <Route path="/" element={<Home />} />
 
 
 
@@ -16,9 +22,11 @@ function App() {
 
 
 
-                    <Route path="*" element={<ErrorPage />}/>
-                </Routes>
+                <Route path="*" element={<ErrorPage />} />
+            </Routes>
+        </languageContext.Provider>
     </>
     );
 }
 export default App;
+export { languageContext }

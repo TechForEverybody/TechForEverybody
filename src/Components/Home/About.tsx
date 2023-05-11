@@ -1,5 +1,5 @@
 import React from 'react'
-import Typewriter from 'typewriter-effect';
+// import Typewriter from 'typewriter-effect';
 import InterestData from '../../Assets/Data/InerestedFields.json';
 
 function About() {
