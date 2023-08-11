@@ -15,7 +15,17 @@
 </a>  
   
 ### Hey you, Welcome here  
-I am a final year student and working in web development field from 2 years. I have done projects from scratch using HTML, CSS and JavaScript only. Also using PHP as a backend and MySQL as a database. I have also worked with M.E.R.N. stack technology and also worked with Python and FLASK as a back-end. I have also done some projects in Machine Learning and Deep Learning Fields using Python, sklearn and TensorFlow. In machine Learning field i have created an machine learning model which predicts the price of houses on the basis of environmental and physical entity value input , and i have also created an model that can understand the trend of covid-19 and predicts the future situation of cases using different type of machine learning models, further i am working on projects on machine learning, deep learning, Artificial Intelligence.I have also worked with Java and Python languages for GUI building and C programming for algorithm building.
+I am Computer Science Engineer, and I am working in Web development and Data Science field from 2 years including Learning Phases. 
+I have mainly worked as ReactJS Developer and Python Developer, and worked with M.E.R.N. Stack Technology as my main working Stack.
+Initially I have done projects from scratch using HTML, CSS, and JavaScript only. After that I have used PHP as a backend and MySQL as a database. Then I have Adapted JavaScript technologies for working. Also have worked with different tools to develop Web Applications like Material-UI, Figma, Bootstrap, Tailwind-CSS, SCSS styling language, Chart.JS and other Graphical Libraries, TensorFlow.JS, Prisma. In addition, I am working with TypeScript, GraphQL.
+I have also worked in Website, Domain, and Database Hosting. Here I have used Google Cloud, Go-Daddy, and MongoDB Atlas.
+In addition, I have worked with different web integration like Payment Gateway-Integration such as Razorpay and PayPal, Login Integration such as Google, and Facebook, AI integration such as ChatGPT.
+Furthermore, I have worked with Python-Flask Stack for Different Projects, where I have worked with ML and DL applications. I have worked with python with its different tools like pandas, numpy, scikit-learn, TensorFlow, matplotlib, Jupyter, TKinter.
+In past I have worked with different types of projects like Ecommerce Sites, Chatting Application site, Management Sites, Dashboard Development, Database Building, Single-page Application Development, Chatbot Development, File Handling Sites, Data Analytics, ML Application Development, Natural Language Applications, Web Scrapping Applications.
+I have also familiar with different tools like MS-Word, MS-PowerPoint, MS-Excel, Canva, Power-BI, Some Network Visualization Tools, Google Workspace Tools,
+I done internship as a Full Stack Developer and freelance work as a Machine Learning Engineer.
+I am interested to work with some challenging roles. If I get this internship, then I will try to give my 100% to every task.
+
   
 <br/>  
 
