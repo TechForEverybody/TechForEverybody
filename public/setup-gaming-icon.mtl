@@ -1,0 +1,14 @@
+# Blender 4.3.0 MTL File: 'setup-gaming-icon-001.blend'
+# www.blender.org
+
+newmtl Setupgaming
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Ns textures/setup-gaming-icon-001-roughness-metalness-4k.png
+map_refl textures/setup-gaming-icon-001-metalness-metalness-4k.png
+map_Ke textures/setup-gaming-icon-001-emissive-metalness-4k.png
+map_Bump -bm 1.000000 textures/setup-gaming-icon-001-nrm-metalness-4k.png
