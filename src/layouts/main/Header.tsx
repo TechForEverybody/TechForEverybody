@@ -1,5 +1,4 @@
 'use client';
-
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -26,7 +25,7 @@ export default function Header() {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className=" shadow-lg fixed w-full top-0 z-50 transition-colors duration-300">
+        <header className=" shadow-lg fixed w-full backdrop-blur-3xl top-0 z-50 transition-colors duration-300">
             <div className="container mx-auto px-4 md:px-8 flex items-center justify-between h-16">
                 <motion.div
                     className="flex items-center cursor-pointer"
@@ -57,14 +56,14 @@ export default function Header() {
                         >
                             <Link
                                 href={path}
-                                className="text-muted-foreground hover:text-foreground transition-colors duration-200 hover:outline-2 hover:outline-white py-2 rounded-sm px-3"
+                                className="text-muted-foreground hover:text-foreground transition-colors duration-200 hover:outline-2 hover:outline-primary py-2 rounded-sm px-3"
                             >
                                 {title}
                             </Link>
                         </motion.div>
                     ))}
                     <motion.div whileTap={{ scale: 0.95 }}>
-                        <Link href="/contact" className="inline-block">
+                        <Link href="/connect" className="inline-block">
                             <Button variant="secondary" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                                 Connect
                             </Button>
@@ -107,7 +106,7 @@ export default function Header() {
                                             ))}
                                             <motion.div whileTap={{ scale: 0.95 }}>
                                                 <Link
-                                                    href="/contact"
+                                                    href="/connect"
                                                     onClick={() => setOpen(false)}
                                                     className="inline-block w-full"
                                                 >

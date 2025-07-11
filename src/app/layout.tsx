@@ -1,91 +1,86 @@
-import type { Metadata } from "next"
+import Footer from "@/layouts/main/Footer";
 import "../styles/globals.css"
 import Provider from "./provider";
 import Header from "@/layouts/main/Header";
 import { ThemeProvider } from 'next-themes';
+import Script from "next/script";
 
-export const metadata: Metadata = {
-  title: "Shivkumar Chauhan — Full-Stack Engineer | TechForEverybody",
-  description:
-    "Portfolio of Shivkumar Chauhan, a Full-Stack Engineer specializing in React, Next.js, Node.js, AWS and embedded IoT solutions. Explore projects, blog posts and contact information on TechForEverybody.",
-  keywords: [
-    "Shivkumar Chauhan",
-    "Full-Stack Engineer",
-    "React",
-    "Next.js",
-    "Node.js",
-    "AWS",
-    "IoT",
-    "Portfolio",
-    "TechForEverybody",
-    "Web Development"
-  ],
-  openGraph: {
-    title: "Shivkumar Chauhan — Full-Stack Engineer",
-    description:
-      "Discover the work and projects of Shivkumar Chauhan: React & Next.js apps, Node.js backends, AWS deployments and ESP32-based IoT demos.",
-    url: "https://techforeverybody.org/",
-    siteName: "TechForEverybody",
-    images: [
-      {
-        url: "https://techforeverybody.org/TechForEverybody.png",
-        height: 630,
-        alt: "TechForEverybody — Shivkumar Chauhan Portfolio",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Shivkumar Chauhan — Full-Stack Engineer",
-    description:
-      "Portfolio of Shivkumar Chauhan: React, Next.js, Node.js, AWS & IoT projects. See demos, code samples, and get in touch.",
-    images: ["https://techforeverybody.org/og-image.png"],
-  },
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-}
+
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode
+    children: React.ReactNode
 }>) {
-  return (
-    <html lang="en">
-      <body
-        suppressHydrationWarning={true}
-        data-lt-installed={true}
-        className="min-h-screen"
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem={true}
-          disableTransitionOnChange={true}
+    return (
+        <html lang="en"
+            className="dark"
+            style={{ colorScheme: "light" }}
+            suppressHydrationWarning={true}
+            data-lt-installed={true}
         >
-          <Provider>
-            <Header />
-            {children}
-          </Provider>
-        </ThemeProvider>
+            <head>
+                <link rel="preload" href="/TechForEverybody.svg" as="image" />
+                <link rel="icon" href="/TechForEverybody.svg" type="image/svg+xml" />
+                <link rel="apple-touch-icon" href="/TechForEverybody.svg" />
+                <link rel="shortcut icon" href="/TechForEverybody.svg" />
+                <meta name="theme-color" content="#ffffff" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+                <meta name="description" content="Shivkumar Chauhan’s portfolio: Full-Stack development (React, Next.js, Node.js), AI/ML, Data Science, DevOps. Explore projects, blogs, and get in touch." />
+                <meta name="keywords" content="Full Stack Developer, React, Next.js, Node.js, JavaScript, TypeScript, Python, AI, Machine Learning, Data Science, Portfolio, Web Development, MERN Stack, GraphQL, DevOps, Docker, Cloud Computing, TechForEverybody, Shivkumar Chauhan" />
+                <meta name="author" content="Shivkumar Chauhan" />
+                <meta name="robots" content="index, follow" />
+                <meta name="googlebot" content="index, follow" />
+                <meta name="google-site-verification" content="your-google-site-verification-code" />
+                <meta name="msvalidate.01" content="your-bing-site-verification-code" />
+                <meta name="yandex-verification" content="your-yandex-site-verification-code" />
 
-      </body>
-    </html>
-  )
+                <link rel="canonical" href="https://techforeverybody.org" />
+                <Script id="ld-org" type="application/ld+json">
+                    {JSON.stringify({
+                        '@context': 'https://schema.org',
+                        '@type': 'Organization',
+                        name: 'TechForEverybody',
+                        url: 'https://techforeverybody.org',
+                        logo: 'https://techforeverybody.org/TechForEverybody.svg',
+                        sameAs: [
+                            'https://github.com/TechForEverybody',
+                            'https://linkedin.com/in/shiva995'
+                        ]
+                    })}
+                </Script>
+                <Script id="ld-website" type="application/ld+json">
+                    {JSON.stringify({
+                        '@context': 'https://schema.org',
+                        '@type': 'WebSite',
+                        url: 'https://techforeverybody.org',
+                        potentialAction: {
+                            '@type': 'SearchAction',
+                            target: 'https://techforeverybody.org/search?q={search_term_string}',
+                            'query-input': 'required name=search_term_string'
+                        }
+                    })}
+                </Script>
+            </head>
+            <body
+                suppressHydrationWarning={true}
+                data-lt-installed={true}
+                className="min-h-screen"
+            >
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem={true}
+                    disableTransitionOnChange={true}
+                >
+                    <Provider>
+                        <Header />
+                        {children}
+                        <Footer/>
+                    </Provider>
+                </ThemeProvider>
+
+            </body>
+        </html>
+    )
 }
