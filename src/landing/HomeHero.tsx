@@ -19,7 +19,7 @@ export default function HomeHero() {
                     <p className="text-xl font-medium text-primary mb-2">Hello, I&rsquo;m</p>
                     <h1 className="text-5xl xl:text-9xl md:text-7xl font-extrabold text-foreground mb-4">Shivkumar Chauhan</h1>
                     <h2 className="text-2xl md:text-4xl font-semibold text-teal-400 mb-6">Full-Stack Engineer & Data Engineer</h2>
-                    <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-full mx-auto md:mx-0">I build interactive and scalable web applications with AI-powered features, exploring cloud-native architectures to deliver seamless user experiences.</p>
+                    <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-full mx-auto md:mx-0">I build interactive and scalable web applications with AI-powered features, exploring cloud-native architectures to deliver seamless user experiences from ideation to deployment.</p>
                     <div className="flex flex-col sm:flex-row items-center sm:justify-start space-y-4 sm:space-y-0 sm:space-x-6">
                         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                             <Button variant='default' size="lg">Connect</Button>

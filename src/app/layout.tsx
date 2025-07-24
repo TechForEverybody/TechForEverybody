@@ -4,8 +4,8 @@ import Provider from "./provider";
 import Header from "@/layouts/main/Header";
 import { ThemeProvider } from 'next-themes';
 import Script from "next/script";
-
-
+import { Analytics } from "@vercel/analytics/next"
+export { metadata } from "./metadata";
 
 export default function RootLayout({
     children,
@@ -61,6 +61,7 @@ export default function RootLayout({
                         }
                     })}
                 </Script>
+                <Analytics />
             </head>
             <body
                 suppressHydrationWarning={true}
