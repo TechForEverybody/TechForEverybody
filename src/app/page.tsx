@@ -1,12 +1,9 @@
-import HomeHero from '@/landing/HomeHero'
 import React from 'react'
 
-function Page() {
+type Props = {}
+
+export default function page({ }: Props) {
   return (
-    <div>
-      <HomeHero />
-    </div>
+    <div>page</div>
   )
 }
-
-export default Page

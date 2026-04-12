@@ -1,7 +1,5 @@
 import React from 'react';
-import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Experience } from './ExperienceData';
 
 
@@ -22,23 +20,23 @@ export default function ExperienceCard({ data }: ExperienceCardProps) {
         >
             {/* Timeline marker */}
             <span className="absolute left-4 top-4 w-6 h-6 bg-primary dark:bg-secondary rotate-45 shadow-lg" />
-            <Card className="ml-6 pl-4 border-l-4 border-secondary bg-primary dark:bg-secondary shadow-md hover:shadow-lg transition-shadow text-white">
-                <CardHeader>
+            <div className="ml-6 pl-4 border-l-4 border-secondary bg-primary dark:bg-secondary shadow-md hover:shadow-lg transition-shadow text-white">
+                <div>
                     <div className="flex items-center space-x-3">
                         <div className="flex items-center justify-center w-10 h-10 bg-secondary/20 rounded-full">
                             <Icon className="text-secondary text-2xl animate-pulse" />
                         </div>
                         <div>
-                            <CardTitle className="text-lg font-semibold">
+                            <div className="text-lg font-semibold">
                                 {data.position}
-                            </CardTitle>
-                            <CardDescription className="text-sm text-grey">
+                            </div>
+                            <div className="text-sm text-grey">
                                 {data.companyName} • {data.startDate} – {data.endDate}
-                            </CardDescription>
+                            </div>
                         </div>
                     </div>
-                </CardHeader>
-                <CardContent className="mt-2 space-y-4">
+                </div>
+                <div className="mt-2 space-y-4">
                     <p className="text-sm text-primary-foreground">
                         {data.jobDescription}
                     </p>
@@ -52,13 +50,13 @@ export default function ExperienceCard({ data }: ExperienceCardProps) {
                     </div>
                     <div className="flex flex-wrap gap-2">
                         {data.languagesAndFrameworks.map((lang, idx) => (
-                            <Badge key={idx} variant="outline" className='bg-secondary'>
+                            <div key={idx}  className='bg-secondary'>
                                 {lang}
-                            </Badge>
+                            </div>
                         ))}
                     </div>
-                </CardContent>
-            </Card>
+                </div>
+            </div>
         </motion.div>
     );
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Badge } from '@/components/ui/badge';
 import { motion, type Variants } from 'framer-motion';
 
 const containerVariants: Variants = {
@@ -59,7 +58,7 @@ export default function ExperienceHero() {
                     <motion.div variants={itemVariants} className="flex flex-wrap gap-2">
                         {['Python','Javascript','React.js', 'Next.js', 'Node.js', 'TypeScript', 'AI/ML', 'DevOps'].map(tag => (
                             <motion.div key={tag} whileHover={{ scale: 1.1 }}>
-                                <Badge className="px-3 py-1">{tag}</Badge>
+                                <div className="px-3 py-1">{tag}</div>
                             </motion.div>
                         ))}
                     </motion.div>

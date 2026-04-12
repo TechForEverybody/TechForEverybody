@@ -1,85 +1,198 @@
-# **<ins><div align="center">Hey 👋, I'm Shivkumar Chauhan</div></ins>**  
-  
-### Links  
-<a href="https://github.com/TechForEverybody" target="_blank">
-<img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
-</a>
-<a href="https://linkedin.com/in/shiva995" target="_blank">
-<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
-</a>  
-<a href="https://sksinghat95.hackerresume.io/3df0b354-5c96-4786-8a56-7789480c7c70" target="_blank">
-<img src=https://img.shields.io/badge/resume-%23FFFB5.svg?&style=for-the-badge&logo=hackerrank&logoColor=green alt=linkedin style="margin-bottom: 5px;" />
-</a>  
-<a href="https://www.hackerrank.com/Shiva995?hr_r=1" target="_blank">
-<img src=https://img.shields.io/badge/hackerrank-%231EFFB5.svg?&style=for-the-badge&logo=hackerrank&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
-</a>  
-  
-### Hey you, Welcome here  
-I am Computer Science Engineer, and I am working in Web development and Data Science field from 2 years including Learning Phases. 
-I have mainly worked as ReactJS Developer and Python Developer, and worked with M.E.R.N. Stack Technology as my main working Stack.
-Initially I have done projects from scratch using HTML, CSS, and JavaScript only. After that I have used PHP as a backend and MySQL as a database. Then I have Adapted JavaScript technologies for working. Also have worked with different tools to develop Web Applications like Material-UI, Figma, Bootstrap, Tailwind-CSS, SCSS styling language, Chart.JS and other Graphical Libraries, TensorFlow.JS, Prisma. In addition, I am working with TypeScript, GraphQL.
-I have also worked in Website, Domain, and Database Hosting. Here I have used Google Cloud, Go-Daddy, and MongoDB Atlas.
-In addition, I have worked with different web integration like Payment Gateway-Integration such as Razorpay and PayPal, Login Integration such as Google, and Facebook, AI integration such as ChatGPT.
-Furthermore, I have worked with Python-Flask Stack for Different Projects, where I have worked with ML and DL applications. I have worked with python with its different tools like pandas, numpy, scikit-learn, TensorFlow, matplotlib, Jupyter, TKinter.
-In past I have worked with different types of projects like Ecommerce Sites, Chatting Application site, Management Sites, Dashboard Development, Database Building, Single-page Application Development, Chatbot Development, File Handling Sites, Data Analytics, ML Application Development, Natural Language Applications, Web Scrapping Applications.
-I have also familiar with different tools like MS-Word, MS-PowerPoint, MS-Excel, Canva, Power-BI, Some Network Visualization Tools, Google Workspace Tools,
-I done internship as a Full Stack Developer and freelance work as a Machine Learning Engineer.
-I am interested to work with some challenging roles. If I get this internship, then I will try to give my 100% to every task.
+# Hi there, I'm Shiva 👋
 
-  
-<br/>  
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&center=true&vCenter=true&width=900&lines=System+Engineer;Full+Stack+Engineer;Web+%7C+Mobile+%7C+Desktop+Developer;LLM-Powered+Systems+Builder;TypeScript+%7C+Python+%7C+Flutter+%7C+React+Native" alt="Typing SVG" />
+</p>
 
-## Rapidfire  
-<img src="https://miro.medium.com/max/800/0*XH3rLskyOsCqVV-j.jpg" align="center" style="width: 95%" />  
+---
 
-🔭 I’m currently working on Data Mining  
-  
-🌱 I’m currently learning Processing  
-  
-🤝 I’m looking for help with Android  
-  
-👯 I’m looking to collaborate on Full Stack Development  
-  
-💬 Ask me about React, Python, Java, JavaScript, C, Machine/Deep Learning, MERN Stack  
-  
-👨‍💻 All of my projects are available at [My Portfolio](https://portfolio.techforeverybody.live/)
-  
-⚡ Fun fact is I am a fan of Astronomy  
+## 🚀 About Me
 
-<br/>  
+```yaml
+name: Shiva
+role: System Engineer
+experience: 3+ years
+focus:
+  - Full Stack Web Development
+  - Mobile App Development
+  - Desktop Application Development
+  - AI and LLM-Powered Systems
+  - Robotics and Low-Level Programming
+```
 
-## Languages and Tools  
-<div align="center">  
-<a href="https://www.javascript.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" /></a>  
-<a href="https://www.python.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" height="50" /></a>  
-<a href="https://www.java.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/java-original-wordmark.svg" alt="Java" height="50" /></a>  
-<a href="https://www.cprogramming.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/c-original.svg" alt="C" height="50" /></a>  
-<a href="https://www.cplusplus.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/cplusplus-original.svg" alt="C++" height="50" /></a>  
-<a href="https://www.typescriptlang.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/typescript-original.svg" alt="TypeScript" height="50" /></a>  
-<a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" /></a>  
-<a href="https://www.w3schools.com/css/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50" /></a>  
-<a href="https://reactjs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="50" /></a>  
-<a href="https://www.mongodb.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/mongodb-original-wordmark.svg" alt="MongoDB" height="50" /></a>  
-<a href="https://www.mysql.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg" alt="MySQL" height="50" /></a>  
-<a href="https://www.php.net/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/php-original.svg" alt="PHP" height="50" /></a>  
-<a href="https://sass-lang.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/sass-original.svg" alt="Sass" height="50" /></a>  
-<a href="https://nodejs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" height="50" /></a>  
-<a href="https://mui.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/mui.png" alt="Material UI" height="50" /></a>  
-<a href="https://about.gitlab.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/gitlab.svg" alt="GitLab" height="50" /></a>  
-<a href="https://flask.palletsprojects.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/flask.png" alt="Flask" height="50" /></a>  
-<a href="https://github.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" /></a>  
-<a href="https://opencv.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/opencv-icon.svg" alt="OpenCV" height="50" /></a>  
-<a href="https://keras.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/keras.png" alt="Keras" height="50" /></a>  
-<a href="https://www.r-project.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/r.svg" alt="R" height="50" /></a>  
-<a href="https://www.prisma.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/prisma.png" alt="Prisma" height="50" /></a>  
-<a href="https://www.postgresql.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/postgresql-original-wordmark.svg" alt="PostgreSQL" height="50" /></a>  
-<a href="https://expressjs.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/express-original-wordmark.svg" alt="Express.js" height="50" /></a>  
-<a href="https://www.tensorflow.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/tensorflow-icon.svg" alt="TensorFlow" height="50" /></a>  
-<a href="https://www.chartjs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/logo-title.svg" alt="Chart.js" height="50" /></a>  
-<a href="https://www.figma.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/figma-icon.svg" alt="Figma" height="50" /></a>  
-<a href="https://www.apachefriends.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/xampp.png" alt="XAMPP" height="50" /></a>  
-<a href="https://firebase.google.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/firebase.png" alt="Firebase" height="50" /></a>  
-<a href="https://www.arduino.cc/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/arduino.png" alt="Arduino" height="50" /></a>  
-</div>  
-<br/>
-<hr/>
+I am a **System Engineer with 3+ years of experience** building **web, mobile, desktop, and AI-powered applications** using **TypeScript, Python, Flutter, React-based technologies, and modern cross-platform frameworks**.
+
+My journey started with **frontend development**, where I converted **Figma designs** into responsive and user-friendly web interfaces using **React, SASS, Material UI, HTML, and CSS**. Over time, I expanded into **full stack development**, working with **JavaScript, PHP, MySQL, Flask, and MERN-based stacks** to build scalable and production-ready applications.
+
+Currently, I focus on **full stack web development and backend systems** using **TypeScript and Python**, designing **APIs**, handling **data workflows**, and building robust application architectures.
+
+I also actively work on **AI-driven solutions**, including **machine learning** and **LLM-powered systems**, using tools such as **Python, scikit-learn, and TensorFlow** to integrate intelligent features into real-world applications.
+
+In mobile development, I build **cross-platform and native applications** using **Flutter, React Native, and Kotlin**, delivering high-performance apps with consistent user experiences across devices. I also develop **desktop applications**, focusing on performance, usability, and system-level integration.
+
+Additionally, I have experience in **robotics and low-level programming using C++**, where I work on performance-critical systems, control logic, and hardware-oriented solutions.
+
+---
+
+## 🧠 What I Build
+
+- **Web Apps** — scalable, responsive, and production-ready platforms
+- **Mobile Apps** — cross-platform and native applications
+- **Desktop Apps** — performance-focused and system-integrated software
+- **AI Features** — LLM integrations, ML pipelines, and intelligent workflows
+- **Backend Systems** — APIs, architecture, and data handling
+- **Robotics Systems** — logic, control, and low-level programming
+
+---
+
+## 🛠️ Tech Stack
+
+### Languages
+<p>
+  <img src="https://skillicons.dev/icons?i=ts,js,python,php,java,kotlin,cpp,rust" />
+</p>
+
+### Frontend
+<p>
+  <img src="https://skillicons.dev/icons?i=react,html,css,sass,materialui" />
+</p>
+
+### Backend and Databases
+<p>
+  <img src="https://skillicons.dev/icons?i=nodejs,express,flask,mysql,mongodb" />
+</p>
+
+### Mobile and Desktop
+<p>
+  <img src="https://skillicons.dev/icons?i=flutter,react" />
+</p>
+
+### AI and ML
+<p>
+  <img src="https://skillicons.dev/icons?i=python,tensorflow" />
+</p>
+
+### Tools
+<p>
+  <img src="https://skillicons.dev/icons?i=git,github,vscode,figma" />
+</p>
+
+---
+
+## 🌐 Domains I Work In
+
+```text
+Web Development        ████████████████████
+Mobile Development     ██████████████████
+Desktop Development    ████████████████
+Backend Engineering    ██████████████████
+AI / LLM Systems       ████████████████
+Robotics / C++         ██████████████
+```
+
+---
+
+## 📌 Current Focus
+
+- Building **LLM-powered systems** for practical applications
+- Developing **full stack apps** with **TypeScript** and **Python**
+- Creating **cross-platform mobile and desktop applications**
+- Exploring **AI integration**, **automation**, and **real-world product architecture**
+
+---
+
+## 🏆 Highlights
+
+- 3+ years of professional experience in software development
+- Built applications across **web, mobile, desktop, and AI** domains
+- Strong experience in converting **Figma designs into production-ready interfaces**
+- Worked with **modern frontend, backend, and cross-platform frameworks**
+- Participated in **online competitions and hackathons** with multiple ranks and certificates
+- Engineering background in **Computer Science**
+
+---
+
+## 🤝 Let’s Connect
+
+<p align="left">
+  <a href="https://linkedin.com/in/your-linkedin-username" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://github.com/your-github-username" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  <a href="https://twitter.com/your-twitter-username" target="_blank">
+    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
+  </a>
+  <a href="https://instagram.com/your-instagram-username" target="_blank">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
+  </a>
+  <a href="https://facebook.com/your-facebook-username" target="_blank">
+    <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" />
+  </a>
+  <a href="https://youtube.com/@your-youtube-handle" target="_blank">
+    <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" />
+  </a>
+  <a href="https://medium.com/@your-medium-username" target="_blank">
+    <img src="https://img.shields.io/badge/Medium-000000?style=for-the-badge&logo=medium&logoColor=white" />
+  </a>
+  <a href="https://dev.to/your-devto-username" target="_blank">
+    <img src="https://img.shields.io/badge/Dev.to-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white" />
+  </a>
+  <a href="mailto:your-email@example.com" target="_blank">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://your-portfolio-link.com" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio-111111?style=for-the-badge&logo=vercel&logoColor=white" />
+  </a>
+</p>
+
+---
+
+##  GitHub Stats
+
+<p align="center">
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=your-github-username&show_icons=true&theme=tokyonight" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=your-github-username&layout=compact&theme=tokyonight" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=your-github-username&theme=tokyonight" />
+</p>
+
+---
+
+## 🔥 Profile Motto
+
+> Building systems that are scalable, intelligent, and actually useful.
+
+---
+
+## 💡 Fun Engineering Note
+
+I like building software the old-fashioned good way: **clean logic, strong foundations, real performance, and modern execution**.
+
+---
+
+## 📫 Contact
+
+- **Email:** your-email@example.com
+- **LinkedIn:** https://linkedin.com/in/your-linkedin-username
+- **GitHub:** https://github.com/your-github-username
+- **Portfolio:** https://your-portfolio-link.com
+
+---
+
+<!--
+Replace all placeholder links:
+- your-github-username
+- your-linkedin-username
+- your-twitter-username
+- your-instagram-username
+- your-facebook-username
+- your-youtube-handle
+- your-medium-username
+- your-devto-username
+- your-email@example.com
+- your-portfolio-link.com
+-->
