@@ -1,0 +1,16 @@
+export const C = {
+    bg: '#060606',
+    bgGradient: 'radial-gradient(ellipse 90% 30% at 50% 0%, #111111 0%, #060606 65%)',
+    surface: '#0e0e0e',
+    surface2: '#161616',
+    surface3: '#1e1e1e',
+    border: '#1c1c1c',
+    borderMid: '#272727',
+    text: '#f5f5f5',
+    textSub: '#6b6b6b',
+    textMuted: '#3a3a3a',
+    accent: '#1693F9',
+    accentBright: '#001F8E',
+    accentGlow: 'rgba(22, 249, 82, 0.28)',
+    accentDim: '#1693F9',
+} as const
