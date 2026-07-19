@@ -11,7 +11,7 @@ import {
     East,
     Download,
 } from '@mui/icons-material'
-import { motion, useInView, useMotionValue, useSpring, AnimatePresence } from 'framer-motion'
+import { motion, useInView, useMotionValue, useSpring } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 import { C } from '../theme'
 
