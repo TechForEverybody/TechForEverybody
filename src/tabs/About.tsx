@@ -141,55 +141,6 @@ function SectionLabel({ children, delay = 0 }: { children: string; delay?: numbe
 
 
 
-// ── Cycling role display ──────────────────────────────────────────────────────
-
-function CyclingRole() {
-    const [index, setIndex] = useState(0)
-
-    useEffect(() => {
-        const id = setInterval(() => setIndex(i => (i + 1) % ROLES.length), 2400)
-        return () => clearInterval(id)
-    }, [])
-
-    return (
-        <Box sx={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '8px',
-            mb: '20px',
-            height: 26,
-            overflow: 'hidden',
-        }}>
-            <Box sx={{
-                width: 7, height: 7, borderRadius: '50%',
-                background: C.accent,
-                boxShadow: `0 0 10px ${C.accent}`,
-                animation: 'pulse 2s ease infinite',
-                '@keyframes pulse': {
-                    '0%, 100%': { opacity: 1 },
-                    '50%': { opacity: 0.4 },
-                },
-            }} />
-            <AnimatePresence mode="wait">
-                <motion.span
-                    key={index}
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -12 }}
-                    transition={{ duration: 0.35, ease: 'easeInOut' }}
-                    style={{
-                        fontSize: '0.8rem',
-                        fontWeight: 600,
-                        color: C.accent,
-                        letterSpacing: '0.04em',
-                    }}
-                >
-                    {ROLES[index]}
-                </motion.span>
-            </AnimatePresence>
-        </Box>
-    )
-}
 
 // ── Component ─────────────────────────────────────────────────────────────────
 
