@@ -1,102 +1,146 @@
-import { Box, Typography } from '@mui/material'
-import { SchoolOutlined } from '@mui/icons-material'
-import { C } from '../theme'
+import { Box, Typography, keyframes } from '@mui/material'
+import { SchoolOutlined, EmojiEventsOutlined, CalendarTodayOutlined } from '@mui/icons-material'
 
-const PLACEHOLDER_EDUCATION = [
+const GREEN = '#16a34a'
+const DARK = '#052e16'
+const MINT = '#dcfce7'
+
+const shimmer = keyframes`0%{background-position:-200% 0}100%{background-position:200% 0}`
+
+const EDUCATION_DATA = [
     {
         degree: 'Bachelor of Engineering',
         field: 'Computer Engineering',
         institution: 'Pillai College of Engineering, New Panvel',
-        period: '2021 — 2025',
+        period: '2019 — 2023',
         grade: 'CGPA: 9.79',
+        highlights: ['3.5 Years Programming Learning Experience', 'Internship work motivation and support', 'Core Computer Engineering Knowledge'],
     },
 ]
 
 export default function Education() {
     return (
         <Box sx={{
-            maxWidth: 780,
-            mx: 'auto',
-            px: { xs: 3, md: 4 },
-            py: { xs: 6, md: 8 },
+            position: 'relative',
+            background: `linear-gradient(160deg, #064e3b 0%, ${GREEN} 50%, #4ade80 100%)`,
+            px: { xs: 2, md: 4 },
+            py: { xs: 5, md: 8 },
+            overflow: 'hidden',
         }}>
-            {/* Section header */}
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px', mb: '40px' }}>
-                <Box sx={{
-                    width: 36, height: 36, borderRadius: '9px',
-                    background: `linear-gradient(145deg, ${C.accentBright}, ${C.accentDim})`,
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    boxShadow: `0 0 16px ${C.accentGlow}`,
-                }}>
-                    <SchoolOutlined sx={{ fontSize: 18, color: '#fff' }} />
-                </Box>
-                <Typography sx={{ fontSize: '1.5rem', fontWeight: 800, letterSpacing: '-0.02em', color: C.text }}>
-                    Education
-                </Typography>
-            </Box>
+            {/* Decorative elements */}
+            <Box sx={{
+                position: 'absolute', inset: 0, pointerEvents: 'none', opacity: 0.06,
+                backgroundImage: `radial-gradient(circle, #fff 1px, transparent 1px)`,
+                backgroundSize: '32px 32px',
+            }} />
+            <Box sx={{ position: 'absolute', top: '15%', left: '8%', width: 120, height: 120, borderRadius: '50%', background: 'rgba(255,255,255,0.08)', filter: 'blur(40px)', pointerEvents: 'none' }} />
+            <Box sx={{ position: 'absolute', bottom: '10%', right: '6%', width: 160, height: 160, borderRadius: '50%', background: 'rgba(255,255,255,0.06)', filter: 'blur(50px)', pointerEvents: 'none' }} />
 
-            {/* Cards */}
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                {PLACEHOLDER_EDUCATION.map(({ degree, field, institution, period, grade }, i) => (
-                    <Box key={i} sx={{
-                        display: 'flex',
-                        flexDirection: { xs: 'column', sm: 'row' },
-                        gap: '20px',
-                        p: '22px 24px',
-                        borderRadius: '14px',
-                        background: C.surface2,
-                        border: `1px solid ${i === 0 ? C.borderMid : C.border}`,
-                        boxShadow: i === 0 ? '0 8px 32px rgba(0,0,0,0.35)' : 'none',
-                        position: 'relative',
-                        overflow: 'hidden',
-                        '&::before': i === 0 ? {
-                            content: '""',
-                            position: 'absolute',
-                            left: 0, top: 0, bottom: 0,
-                            width: '3px',
-                            background: `linear-gradient(180deg, ${C.accentBright}, ${C.accentDim})`,
-                            borderRadius: '3px 0 0 3px',
-                        } : {},
+            <Box sx={{ maxWidth: 800, mx: 'auto', position: 'relative', zIndex: 1 }}>
+                {/* Header */}
+                <Box sx={{ textAlign: 'center', mb: { xs: '28px', md: '40px' } }}>
+                    <Box sx={{
+                        display: 'inline-flex', alignItems: 'center', gap: '8px',
+                        background: DARK, borderRadius: '20px', px: '14px', py: '5px', mb: '12px',
+                        boxShadow: `0 6px 20px rgba(5,46,22,0.5)`,
                     }}>
-                        {/* Left — year badge */}
-                        <Box sx={{
-                            flexShrink: 0,
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: { xs: 'flex-start', sm: 'center' },
-                            justifyContent: 'flex-start',
-                            gap: '6px',
-                            minWidth: 100,
-                        }}>
-                            <Box sx={{
-                                px: '10px', py: '4px',
-                                borderRadius: '6px',
-                                background: C.surface3,
-                                border: `1px solid ${C.borderMid}`,
-                            }}>
-                                <Typography sx={{ fontSize: '0.7rem', color: C.textSub, fontWeight: 600, whiteSpace: 'nowrap' }}>
-                                    {period}
-                                </Typography>
-                            </Box>
-                            <Typography sx={{ fontSize: '0.72rem', color: C.accent, fontWeight: 600 }}>
-                                {grade}
-                            </Typography>
-                        </Box>
+                        <SchoolOutlined sx={{ fontSize: 14, color: '#4ade80' }} />
+                        <Typography sx={{ fontSize: '0.68rem', fontWeight: 700, color: '#fff', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+                            Academic Background
+                        </Typography>
+                    </Box>
+                    <Typography sx={{
+                        fontSize: { xs: '1.7rem', md: '2.4rem' }, fontWeight: 900,
+                        color: '#fff', letterSpacing: '-0.03em', lineHeight: 1.1,
+                        textShadow: '0 2px 12px rgba(5,46,22,0.4)',
+                    }}>
+                        Education
+                    </Typography>
+                    <Typography sx={{ fontSize: '0.8rem', fontWeight: 500, color: 'rgba(255,255,255,0.8)', mt: '6px', maxWidth: 400, mx: 'auto', lineHeight: 1.5 }}>
+                        Strong academic foundation paired with hands-on engineering excellence.
+                    </Typography>
+                </Box>
 
-                        {/* Right — details */}
-                        <Box>
-                            <Typography sx={{ fontSize: '1rem', fontWeight: 700, color: C.text, mb: '3px' }}>
+                {/* Education cards */}
+                <Box sx={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                    {EDUCATION_DATA.map(({ degree, field, institution, period, grade, highlights }, i) => (
+                        <Box key={i} sx={{
+                            background: DARK,
+                            borderRadius: '18px',
+                            p: { xs: '20px', md: '28px' },
+                            border: '1.5px solid rgba(255,255,255,0.1)',
+                            position: 'relative',
+                            overflow: 'hidden',
+                            transition: 'all 0.2s ease',
+                            '&:hover': {
+                                border: `1.5px solid ${GREEN}`,
+                                transform: 'translateY(-2px)',
+                                boxShadow: '0 16px 40px rgba(5,46,22,0.6)',
+                            },
+                        }}>
+                           
+
+                            {/* Corner glow */}
+                            <Box sx={{
+                                position: 'absolute', top: 0, right: 0, width: 100, height: 100,
+                                background: `radial-gradient(circle at top right, rgba(74,222,128,0.12), transparent 70%)`,
+                                pointerEvents: 'none',
+                            }} />
+
+                            {/* Top row: period + grade */}
+                            <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px', mb: '14px', flexWrap: 'wrap' }}>
+                                <Box sx={{
+                                    display: 'flex', alignItems: 'center', gap: '5px',
+                                    px: '10px', py: '4px', borderRadius: '8px',
+                                    background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)',
+                                }}>
+                                    <CalendarTodayOutlined sx={{ fontSize: 11, color: 'rgba(255,255,255,0.5)' }} />
+                                    <Typography sx={{ fontSize: '0.68rem', fontWeight: 600, color: 'rgba(255,255,255,0.7)' }}>
+                                        {period}
+                                    </Typography>
+                                </Box>
+                                <Box sx={{
+                                    display: 'flex', alignItems: 'center', gap: '5px',
+                                    px: '10px', py: '4px', borderRadius: '8px',
+                                    background: `linear-gradient(135deg, ${GREEN}33, ${GREEN}11)`,
+                                    border: `1px solid ${GREEN}44`,
+                                }}>
+                                    <EmojiEventsOutlined sx={{ fontSize: 12, color: '#4ade80' }} />
+                                    <Typography sx={{ fontSize: '0.7rem', fontWeight: 700, color: '#4ade80' }}>
+                                        {grade}
+                                    </Typography>
+                                </Box>
+                            </Box>
+
+                            {/* Degree info */}
+                            <Typography sx={{ fontSize: '1.2rem', fontWeight: 800, color: '#fff', mb: '4px', letterSpacing: '-0.01em' }}>
                                 {degree}
                             </Typography>
-                            <Typography sx={{ fontSize: '0.8rem', color: C.textSub, mb: '6px' }}>
+                            <Typography sx={{ fontSize: '0.85rem', fontWeight: 600, color: 'rgba(255,255,255,0.7)', mb: '4px' }}>
                                 {field}
                             </Typography>
-                            <Typography sx={{ fontSize: '0.75rem', color: C.textMuted, fontStyle: 'italic' }}>
+                            <Typography sx={{ fontSize: '0.75rem', fontWeight: 500, color: 'rgba(255,255,255,0.4)', fontStyle: 'italic', mb: '16px' }}>
                                 {institution}
                             </Typography>
+
+                            {/* Highlights */}
+                            {highlights && highlights.length > 0 && (
+                                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                                    {highlights.map(h => (
+                                        <Box key={h} sx={{
+                                            px: '10px', py: '5px', borderRadius: '8px',
+                                            background: MINT, border: `1px solid ${GREEN}44`,
+                                        }}>
+                                            <Typography sx={{ fontSize: '0.65rem', fontWeight: 700, color: DARK }}>
+                                                {h}
+                                            </Typography>
+                                        </Box>
+                                    ))}
+                                </Box>
+                            )}
                         </Box>
-                    </Box>
-                ))}
+                    ))}
+                </Box>
             </Box>
         </Box>
     )

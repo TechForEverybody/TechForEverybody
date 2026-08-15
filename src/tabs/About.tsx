@@ -153,11 +153,14 @@ export default function About() {
         <Box
             ref={containerRef}
             sx={{
-                maxWidth: 1500,
+                // minHeight: '100vh',
                 mx: 'auto',
-                px: { xs: '20px', sm: '32px', md: '48px' },
-                pt: { xs: '10px', sm: '15px', md: '20px' },
+                height: '100%',
+                px: { xs: '20px', sm: '32px', md: '96px' },
+                py: { xs: '50px', sm: '30px', md: '100px' },
                 position: 'relative',
+                background: "black",
+
             }}
         >
 
@@ -210,16 +213,6 @@ export default function About() {
                     </Typography>
                 </motion.div>
 
-                {/* ── Cycling role ──
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={inView ? { opacity: 1 } : {}}
-                    transition={{ delay: 0.3, duration: 0.5 }}
-                >
-                    <CyclingRole />
-                </motion.div> */}
-
-                {/* ── Role pills ── */}
                 <motion.div
                     initial="hidden"
                     animate={inView ? 'show' : 'hidden'}
