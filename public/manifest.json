@@ -1,0 +1,15 @@
+{
+    "name": "TechForEverybody",
+    "short_name": "Tech4All",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0d47a1",
+    "icons": [
+        {
+            "src": "/TechForEverybody.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml"
+        }
+    ]
+}
