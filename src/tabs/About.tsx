@@ -4,8 +4,9 @@ import {
     AutoAwesome,
     Cloud,
     Shield,
-    East,
     Download,
+    Android,
+    Computer,
 } from '@mui/icons-material'
 import { motion, useInView, useMotionValue, useSpring } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
@@ -14,27 +15,20 @@ import Aurora from '../components/Aurora'
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 
-const ROLES = [
-    'Computer Scientist',
-    'Full Stack Engineer',
-    'AI & LLM Solutions Engineer',
-    'Networking & Cybersecurity',
-    'Robotics & IoT Architect',
-]
-
-
 const BIO = [
-    "Full Stack Engineer with 3+ years of experience designing and building scalable software products across web, desktop, mobile, and AI-driven platforms — spanning the complete software development lifecycle.",
-    "I specialize in JavaScript, Python, Java, and C++ — building modern frontend interfaces, backend APIs, data-driven systems, desktop apps, and Android applications. My recent focus is Agentic AI, LLM-powered applications, workflow automation, and intelligent software systems that integrate language models with tools, APIs, and business workflows.",
-    "I've shipped products in edtech, robotics, AI, cybersecurity, developer tooling, competition platforms, and enterprise software — taking ideas from concept to production. Good software is about understanding problems, designing scalable architectures, and delivering long-term value.",
+    "Full Stack Engineer with 3+ years building scalable products across web, desktop, mobile, and AI-driven platforms — end to end.",
+    "Specializing in JavaScript, Python, Java, and C++. Current focus: Agentic AI, LLM-powered apps, and workflow automation integrating language models with tools and APIs.",
+    "Shipped products in edtech, robotics, AI, cybersecurity, and developer tooling — from concept to production.",
+]
+const EXPERTISE = [
+    { label: 'Full Stack Development', Icon: Code },
+    { label: 'Android Development', Icon: Android },
+    { label: 'Data Engineering, AI & LLM Integration', Icon: AutoAwesome },
+    { label: 'Cloud Architecture', Icon: Cloud },
+    { label: 'Cybersecurity', Icon: Shield },
+    { label: 'Desktop Applications', Icon: Computer },
 ]
 
-const EXPERTISE = [
-    { label: 'Web, Mobile and Desktop Full Stack Development', Icon: Code },
-    { label: 'Cloud Architecture', Icon: Cloud },
-    { label: 'Data Engineering, AI & LLM Integration', Icon: AutoAwesome },
-    { label: 'Cybersecurity', Icon: Shield },
-]
 
 // ── Animation ─────────────────────────────────────────────────────────────────
 
@@ -90,8 +84,9 @@ export default function About() {
             sx={{
                 mx: 'auto',
                 height: '100%',
-                px: { xs: '16px', sm: '28px', md: '96px' },
-                py: { xs: '40px', sm: '50px', md: '120px' },
+                minHeight: '85vh',
+                px: { xs: '16px', sm: '28px', md: '75px' },
+                py: { xs: '40px', md: '100px', xl: '120px' },
                 pt: { xs: '40px', sm: '50px', md: '50px' },
                 position: 'relative',
                 background: C.bg,
@@ -106,7 +101,9 @@ export default function About() {
                     speed={0.8}
                 />
             </Box>
-           
+
+
+
 
             {/* ── Header block ── */}
             <motion.div
@@ -136,38 +133,7 @@ export default function About() {
                     </Typography>
                 </Box>
 
-                {/* Role ticker strip */}
-                <Box sx={{
-                    display: 'flex',
-                    gap: '6px',
-                    flexWrap: 'wrap',
-                    mb: '28px',
-                    pl: '2px',
-                }}>
-                    {ROLES.map((role, i) => (
-                        <motion.span
-                            key={role}
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={inView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ delay: 0.4 + i * 0.08, duration: 0.4, ease: EASE }}
-                        >
-                            <Box sx={{
-                                px: '8px', py: '3px',
-                                border: `1px solid ${C.borderMid}`,
-                                background: C.surface,
-                                fontSize: '0.7rem',
-                                fontWeight: 600,
-                                color: C.textSub,
-                                letterSpacing: '0.01em',
-                                transition: 'all 0.2s',
-                                cursor: 'default',
-                                '&:hover': { background: C.accent, color: '#fff', borderColor: C.accent },
-                            }}>
-                                {role}
-                            </Box>
-                        </motion.span>
-                    ))}
-                </Box>
+
             </motion.div>
 
             {/* ── Main grid: 3 columns on desktop ── */}
@@ -187,7 +153,7 @@ export default function About() {
                     animate={inView ? 'show' : 'hidden'}
                 >
                     {/* Bio paragraphs as stacked cards */}
-                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: '10px', mb: '28px' }}>
+                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: '20px', my: '28px' }}>
                         {BIO.map((para, i) => (
                             <motion.div key={i} variants={slideIn}>
                                 <Box sx={{
@@ -196,7 +162,7 @@ export default function About() {
                                     borderLeft: i === 0 ? `3px solid ${C.accent}` : `3px solid ${C.border}`,
                                 }}>
                                     <Typography sx={{
-                                        fontSize: '0.8rem',
+                                        fontSize: '1.3rem',
                                         color: i === 0 ? C.text : C.textSub,
                                         lineHeight: 1.7,
                                         fontWeight: i === 0 ? 500 : 400,
@@ -209,61 +175,7 @@ export default function About() {
                     </Box>
 
                     {/* Expertise — 2-column compact grid */}
-                    <Typography sx={{
-                        fontSize: '0.65rem',
-                        fontWeight: 700,
-                        color: C.textMuted,
-                        letterSpacing: '0.14em',
-                        textTransform: 'uppercase',
-                        mb: '10px',
-                    }}>
-                        Core Expertise
-                    </Typography>
-                    <Box sx={{
-                        display: 'grid',
-                        gridTemplateColumns: { xs: '1fr 1fr', sm: '1fr 1fr 1fr 1fr' },
-                        gap: '6px',
-                    }}>
-                        {EXPERTISE.map(({ label, Icon }) => (
-                            <motion.div key={label} variants={popUp}>
-                                <Box
-                                    component={motion.div}
-                                    whileHover={{ y: -3, scale: 1.02 }}
-                                    sx={{
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        alignItems: 'center',
-                                        gap: '6px',
-                                        px: '8px', py: '14px',
-                                        borderRadius: '10px',
-                                        background: C.surface,
-                                        border: `1px solid ${C.border}`,
-                                        cursor: 'default',
-                                        transition: 'border-color 0.2s',
-                                        '&:hover': { borderColor: C.accent },
-                                    }}
-                                >
-                                    <Box sx={{
-                                        width: 32, height: 32,
-                                        borderRadius: '8px',
-                                        background: C.accentBright,
-                                        display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                    }}>
-                                        <Icon sx={{ fontSize: 15, color: '#fff' }} />
-                                    </Box>
-                                    <Typography sx={{
-                                        fontSize: '0.68rem',
-                                        fontWeight: 600,
-                                        color: C.text,
-                                        textAlign: 'center',
-                                        lineHeight: 1.2,
-                                    }}>
-                                        {label}
-                                    </Typography>
-                                </Box>
-                            </motion.div>
-                        ))}
-                    </Box>
+
                 </motion.div>
 
                 {/* ── Vertical divider ── */}
@@ -274,15 +186,13 @@ export default function About() {
                     background: `linear-gradient(to bottom, transparent, ${C.borderMid}, transparent)`,
                 }} />
 
-                {/* ── Right: Stats + Resume ── */}
+                {/* ── Right: Resume + Code ── */}
                 <motion.div
                     variants={stagger}
                     initial="hidden"
                     animate={inView ? 'show' : 'hidden'}
                     style={{ display: 'flex', flexDirection: 'column', gap: 14 }}
                 >
-
-
                     {/* Resume button */}
                     <motion.div variants={slideIn}>
                         <Box
@@ -311,7 +221,6 @@ export default function About() {
                         >
                             <Download sx={{ fontSize: 15 }} />
                             Download Resume
-                            <East sx={{ fontSize: 13 }} />
                         </Box>
                     </motion.div>
 
@@ -348,6 +257,74 @@ export default function About() {
                         </Box>
                     </motion.div>
                 </motion.div>
+            </Box>
+            <Box sx={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: '8px',
+                position: 'relative',
+                zIndex: 1,
+                my: '28px',
+            }}>
+                {EXPERTISE.map(({ label, Icon }, i) => (
+                    <motion.div
+                        key={label}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={inView ? { opacity: 1, x: 0 } : {}}
+                        transition={{ delay: 0.4 + i * 0.08, duration: 0.4, ease: EASE }}
+                    >
+                        <Box
+                            component={motion.div}
+                            whileHover={{ scale: 1.05, x: 4 }}
+                            whileTap={{ scale: 0.96 }}
+                            sx={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '8px',
+                                px: '12px', py: '8px',
+                                borderRadius: '99px',
+                                background: C.surface,
+                                border: `1.5px solid ${C.border}`,
+                                cursor: 'default',
+                                transition: 'all 0.25s ease',
+                                '&:hover': {
+                                    background: C.accent,
+                                    borderColor: C.accent,
+                                    boxShadow: `0 4px 20px ${C.accentGlow}`,
+                                    '& .expertise-icon': {
+                                        background: '#fff',
+                                        '& svg': { color: C.accent },
+                                    },
+                                    '& .expertise-label': { color: '#fff' },
+                                },
+                            }}
+                        >
+                            <Box
+                                className="expertise-icon"
+                                sx={{
+                                    width: 26, height: 26,
+                                    borderRadius: '50%',
+                                    background: C.accent,
+                                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                    flexShrink: 0,
+                                    transition: 'all 0.25s ease',
+                                }}>
+                                <Icon sx={{ fontSize: 13, color: '#fff', transition: 'color 0.25s ease' }} />
+                            </Box>
+                            <Typography
+                                className="expertise-label"
+                                sx={{
+                                    fontSize: '0.72rem',
+                                    fontWeight: 700,
+                                    color: C.text,
+                                    whiteSpace: 'nowrap',
+                                    transition: 'color 0.25s ease',
+                                }}>
+                                {label}
+                            </Typography>
+                        </Box>
+                    </motion.div>
+                ))}
             </Box>
         </Box>
     )

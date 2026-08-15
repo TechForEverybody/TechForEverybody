@@ -110,13 +110,13 @@ export default function FeaturedSection() {
     return (
         <Box ref={ref} sx={{ py: '28px', px: {
             xs: '20px',
-            md: 15,
+            md: 12,
         }, background: "white", borderRadius: '20px 20px 0 0',  }}>
 
             {/* Cards Grid */}
             <Box sx={{
                 display: 'grid',
-                gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' },
+                gridTemplateColumns: { xs: '1fr', sm: 'repeat(3, 1fr)', xl: 'repeat(4, 1fr)' },
                 gap: '12px',
                 position: 'relative',
                 marginTop: -15,
