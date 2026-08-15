@@ -19,7 +19,7 @@ const EXPERIENCES = [
         ],
     },
     {
-        period: 'May 2023 — July 2026',
+        period: 'May 2023 — July 2025',
         role: 'Full Stack Javascript & Python Developer',
         company: 'Kritrima Prajna Innovations PVT LTD',
         type: 'Full-time',

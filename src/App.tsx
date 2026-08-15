@@ -76,7 +76,7 @@ function TopBar({ onToggleSidebar, sidebarOpen }: { onToggleSidebar: () => void;
       top: 0, left: 0, right: 0,
       zIndex: 200,
       background: 'transparent',
-      backdropFilter: 'blur(40px)',
+      // backdropFilter: 'blur(40px)',
       display: 'flex',
       alignItems: 'center',
       px: '5px',

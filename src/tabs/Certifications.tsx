@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material'
-import { WorkspacePremiumOutlined, StarOutlined, VerifiedOutlined, CodeOutlined, AutoAwesomeOutlined, OpenInNewOutlined } from '@mui/icons-material'
+import { StarOutlined, VerifiedOutlined, CodeOutlined, AutoAwesomeOutlined, OpenInNewOutlined } from '@mui/icons-material'
 
 const PINK = '#ec4899'
 const DEEP = '#9d174d'
@@ -64,16 +64,6 @@ export default function Certifications() {
             <Box sx={{ maxWidth: 1400, mx: 'auto', position: 'relative', zIndex: 1 }}>
                 {/* Header */}
                 <Box sx={{ textAlign: 'center', mb: { xs: '28px', md: '42px' } }}>
-                    <Box sx={{
-                        display: 'inline-flex', alignItems: 'center', gap: '8px',
-                        background: INK, borderRadius: '20px', px: '14px', py: '5px', mb: '14px',
-                        boxShadow: `0 8px 24px rgba(26,10,20,0.5)`,
-                    }}>
-                        <WorkspacePremiumOutlined sx={{ fontSize: 13, color: PINK }} />
-                        <Typography sx={{ fontSize: '0.65rem', fontWeight: 700, color: '#fff', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
-                            Credentials
-                        </Typography>
-                    </Box>
                     <Typography sx={{
                         fontSize: { xs: '1.8rem', md: '2.5rem' }, fontWeight: 900,
                         color: WHITE, letterSpacing: '-0.03em', lineHeight: 1.1,
@@ -108,7 +98,7 @@ export default function Certifications() {
                             {/* Cards grid */}
                             <Box sx={{
                                 display: 'grid',
-                                gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr' },
+                                gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr 1fr' },
                                 gap: '12px',
                             }}>
                                 {certs.map(({ title: certTitle, issuer, year, link }, ci) => (

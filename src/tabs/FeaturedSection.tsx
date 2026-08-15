@@ -119,7 +119,9 @@ export default function FeaturedSection() {
                 gridTemplateColumns: { xs: '1fr', sm: 'repeat(3, 1fr)', xl: 'repeat(4, 1fr)' },
                 gap: '12px',
                 position: 'relative',
-                marginTop: -15,
+                marginTop: {
+                    md: -15
+                },
 
             }}>
                 {FEATURED_CARDS.map((card, i) => (

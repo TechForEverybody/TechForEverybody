@@ -193,16 +193,6 @@ export default function Skills() {
             <Box sx={{ maxWidth: 1400, mx: 'auto', position: 'relative', zIndex: 1 }}>
                 {/* Header */}
                 <Box sx={{ textAlign: 'center', mb: { xs: '28px', md: '40px' } }}>
-                    <Box sx={{
-                        display: 'inline-flex', alignItems: 'center', gap: '8px',
-                        background: INK, borderRadius: '20px', px: '14px', py: '5px', mb: '12px',
-                        boxShadow: `0 8px 24px rgba(26,15,6,0.4)`,
-                    }}>
-                        <TbCode style={{ fontSize: 14, color: ORANGE }} />
-                        <Typography sx={{ fontSize: '0.68rem', fontWeight: 700, color: '#fff', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
-                            Technical Arsenal
-                        </Typography>
-                    </Box>
                     <Typography sx={{
                         fontSize: { xs: '1.7rem', md: '2.4rem' }, fontWeight: 900,
                         color: '#fff', letterSpacing: '-0.03em', lineHeight: 1.1,

@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material'
-import { SchoolOutlined, EmojiEventsOutlined, CalendarTodayOutlined } from '@mui/icons-material'
+import {  EmojiEventsOutlined, CalendarTodayOutlined } from '@mui/icons-material'
 
 const GREEN = '#16a34a'
 const DARK = '#052e16'
@@ -38,16 +38,6 @@ export default function Education() {
             <Box sx={{ maxWidth: 800, mx: 'auto', position: 'relative', zIndex: 1 }}>
                 {/* Header */}
                 <Box sx={{ textAlign: 'center', mb: { xs: '28px', md: '40px' } }}>
-                    <Box sx={{
-                        display: 'inline-flex', alignItems: 'center', gap: '8px',
-                        background: DARK, borderRadius: '20px', px: '14px', py: '5px', mb: '12px',
-                        boxShadow: `0 6px 20px rgba(5,46,22,0.5)`,
-                    }}>
-                        <SchoolOutlined sx={{ fontSize: 14, color: '#4ade80' }} />
-                        <Typography sx={{ fontSize: '0.68rem', fontWeight: 700, color: '#fff', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
-                            Academic Background
-                        </Typography>
-                    </Box>
                     <Typography sx={{
                         fontSize: { xs: '1.7rem', md: '2.4rem' }, fontWeight: 900,
                         color: '#fff', letterSpacing: '-0.03em', lineHeight: 1.1,
