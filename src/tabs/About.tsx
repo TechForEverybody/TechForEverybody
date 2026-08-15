@@ -26,11 +26,6 @@ const ROLES = [
     'Robotics & IoT Architect',
 ]
 
-const STATS = [
-    { value: 3, suffix: '+', label: 'Years Experience' },
-    { value: 20, suffix: '+', label: 'Projects Built' },
-    { value: 15, suffix: '+', label: 'Technologies' },
-]
 
 const BIO = [
     "Full Stack Engineer with 3+ years of experience designing and building scalable software products across web, desktop, mobile, and AI-driven platforms — spanning the complete software development lifecycle.",
@@ -39,14 +34,10 @@ const BIO = [
 ]
 
 const EXPERTISE = [
-    { label: 'Full Stack Development', Icon: Code },
-    { label: 'Backend API Design', Icon: Storage },
-    { label: 'AI & LLM Integration', Icon: AutoAwesome },
-    { label: 'Android Development', Icon: Android },
+    { label: 'Web, Mobile and Desktop Full Stack Development', Icon: Code },
     { label: 'Cloud Architecture', Icon: Cloud },
+    { label: 'Data Engineering, AI & LLM Integration', Icon: AutoAwesome },
     { label: 'Cybersecurity', Icon: Shield },
-    { label: 'Desktop Applications', Icon: Computer },
-    { label: 'Data Engineering', Icon: Hub },
 ]
 
 // ── Animation ─────────────────────────────────────────────────────────────────
@@ -293,39 +284,7 @@ export default function About() {
                     animate={inView ? 'show' : 'hidden'}
                     style={{ display: 'flex', flexDirection: 'column', gap: 14 }}
                 >
-                    {/* Stats as big number blocks */}
-                    {STATS.map(({ value, suffix, label }) => (
-                        <motion.div key={label} variants={slideIn}>
-                            <Box sx={{
-                                px: '16px', py: '16px',
-                                borderRadius: '10px',
-                                background: C.surface,
-                                border: `1px solid ${C.border}`,
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '14px',
-                            }}>
-                                <Typography sx={{
-                                    fontSize: '1.6rem',
-                                    fontWeight: 900,
-                                    color: C.accent,
-                                    lineHeight: 1,
-                                    letterSpacing: '-0.03em',
-                                    minWidth: '52px',
-                                }}>
-                                    <AnimatedCounter target={value} suffix={suffix} />
-                                </Typography>
-                                <Box sx={{ height: '24px', width: '1px', background: C.border }} />
-                                <Typography sx={{
-                                    fontSize: '0.75rem',
-                                    fontWeight: 500,
-                                    color: C.textSub,
-                                }}>
-                                    {label}
-                                </Typography>
-                            </Box>
-                        </motion.div>
-                    ))}
+
 
                     {/* Resume button */}
                     <motion.div variants={slideIn}>
@@ -359,7 +318,7 @@ export default function About() {
                         </Box>
                     </motion.div>
 
-                    {/* Decorative code snippet */}
+                    {/* Decorative assembly snippet */}
                     <motion.div variants={popUp}>
                         <Box sx={{
                             mt: '6px',
@@ -368,16 +327,27 @@ export default function About() {
                             background: C.surface2,
                             border: `1px solid ${C.border}`,
                             fontFamily: 'monospace',
-                            fontSize: '0.65rem',
+                            fontSize: '0.62rem',
                             color: C.textSub,
-                            lineHeight: 1.8,
+                            lineHeight: 1.75,
                             overflow: 'hidden',
                         }}>
-                            <Box component="span" sx={{ color: C.accent }}>const</Box> engineer = {'{'}<br />
-                            &nbsp;&nbsp;name: <Box component="span" sx={{ color: '#4ade80' }}>"Shivkumar"</Box>,<br />
-                            &nbsp;&nbsp;focus: <Box component="span" sx={{ color: '#4ade80' }}>"AI + Full Stack"</Box>,<br />
-                            &nbsp;&nbsp;building: <Box component="span" sx={{ color: C.accent }}>true</Box><br />
-                            {'}'};
+                            <Box component="span" sx={{ color: C.textMuted }}>;; engineer.asm</Box><br />
+                            <Box component="span" sx={{ color: C.accent }}>SECTION</Box> .data<br />
+                            &nbsp;&nbsp;my_name&nbsp;<Box component="span" sx={{ color: C.accent }}>DB</Box> <Box component="span" sx={{ color: '#4ade80' }}>"Shivkumar Chauhan"</Box>, 0&nbsp;&nbsp;<Box component="span" sx={{ color: C.textMuted }}>; 0x0000</Box><br />
+                            &nbsp;&nbsp;role&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Box component="span" sx={{ color: C.accent }}>DB</Box> <Box component="span" sx={{ color: '#4ade80' }}>"Sr. Full Stack Engineer"</Box>, 0&nbsp;&nbsp;<Box component="span" sx={{ color: C.textMuted }}>; 0x0013</Box><br />
+                            &nbsp;&nbsp;focus&nbsp;&nbsp;&nbsp;&nbsp;<Box component="span" sx={{ color: C.accent }}>DB</Box> <Box component="span" sx={{ color: '#4ade80' }}>"Software with AI + LLM Systems"</Box>, 0&nbsp;&nbsp;<Box component="span" sx={{ color: C.textMuted }}>; 0x002C</Box><br />
+                            &nbsp;&nbsp;exp_yrs&nbsp;&nbsp;<Box component="span" sx={{ color: C.accent }}>DD</Box> <Box component="span" sx={{ color: '#f59e0b' }}>3</Box>&nbsp;&nbsp;<Box component="span" sx={{ color: C.textMuted }}>; 0x004C</Box><br />
+                            &nbsp;&nbsp;projects&nbsp;<Box component="span" sx={{ color: C.accent }}>DD</Box> <Box component="span" sx={{ color: '#f59e0b' }}>20</Box>&nbsp;&nbsp;<Box component="span" sx={{ color: C.textMuted }}>; 0x0050</Box><br />
+                            &nbsp;&nbsp;status&nbsp;&nbsp;&nbsp;<Box component="span" sx={{ color: C.accent }}>DD</Box> <Box component="span" sx={{ color: '#f59e0b' }}>1</Box>&nbsp;&nbsp;<Box component="span" sx={{ color: C.textMuted }}>; 0x0054 ; building = true</Box><br />
+                            <br />
+                            <Box component="span" sx={{ color: C.accent }}>SECTION</Box> .text<br />
+                            <Box component="span" sx={{ color: C.accent }}>GLOBAL</Box> _start<br />
+                            <Box component="span" sx={{ color: '#4ade80' }}>_start:</Box><br />
+                            &nbsp;&nbsp;<Box component="span" sx={{ color: C.accent }}>MOV</Box>&nbsp;&nbsp;&nbsp;EAX, [exp_yrs]<br />
+                            &nbsp;&nbsp;<Box component="span" sx={{ color: C.accent }}>ADD</Box>&nbsp;&nbsp;&nbsp;EAX, <Box component="span" sx={{ color: '#f59e0b' }}>1</Box>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Box component="span" sx={{ color: C.textMuted }}>; never stop growing</Box><br />
+                            &nbsp;&nbsp;<Box component="span" sx={{ color: C.accent }}>MOV</Box>&nbsp;&nbsp;&nbsp;[exp_yrs], EAX&nbsp;<Box component="span" sx={{ color: C.textMuted }}>; store it back</Box><br />
+                            &nbsp;&nbsp;<Box component="span" sx={{ color: C.accent }}>JMP</Box>&nbsp;&nbsp;&nbsp;<Box component="span" sx={{ color: '#4ade80' }}>_start</Box>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Box component="span" sx={{ color: C.textMuted }}>; infinite loop</Box>
                         </Box>
                     </motion.div>
                 </motion.div>

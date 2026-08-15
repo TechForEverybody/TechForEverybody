@@ -14,7 +14,7 @@ const FEATURED_CARDS = [
         username: '@techforeverybody',
         description: 'Open source contributions, repositories & projects',
         url: 'https://github.com/TechForEverybody',
-        image: 'https://placehold.co/600x280/0d1117/f5f5f5?text=GitHub+Profile',
+        image: '/featured/github.png',
         Icon: FaGithub,
         color: '#f5f5f5',
         gradient: 'linear-gradient(135deg, #0d1117 0%, #161b22 50%, #21262d 100%)',
@@ -25,7 +25,7 @@ const FEATURED_CARDS = [
         username: '@Shiva995',
         description: 'DSA problem solving & competitive programming',
         url: 'https://leetcode.com/u/Shiva995',
-        image: 'https://placehold.co/600x280/1a1a2e/FFA116?text=LeetCode+Profile',
+        image: '/featured/leetcode.png',
         Icon: SiLeetcode,
         color: '#FFA116',
         gradient: 'linear-gradient(135deg, #1a1a2e 0%, #2d1f00 100%)',
@@ -44,10 +44,10 @@ const FEATURED_CARDS = [
     // },
     {
         title: 'LinkedIn',
-        username: '@techforeverybody',
+        username: '@Shiva995',
         description: 'Professional network, experience & connections',
         url: 'https://www.linkedin.com/in/shiva995/',
-        image: 'https://placehold.co/600x280/0a2540/0A66C2?text=LinkedIn+Profile',
+        image: '/featured/linkedin.png',
         Icon: FaLinkedin,
         color: '#0A66C2',
         gradient: 'linear-gradient(135deg, #0a2540 0%, #002d5e 100%)',
@@ -55,10 +55,10 @@ const FEATURED_CARDS = [
     },
     {
         title: 'HackerRank',
-        username: '@techforeverybody',
+        username: '@Shiva995',
         description: 'Skill certifications & coding challenges',
-        url: 'https://www.hackerrank.com/techforeverybody',
-        image: 'https://placehold.co/600x280/0a2e1a/00EA64?text=HackerRank+Profile',
+        url: 'https://www.hackerrank.com/profile/Shiva995',
+        image: '/featured/hackerrank.png',
         Icon: SiHackerrank,
         color: '#00EA64',
         gradient: 'linear-gradient(135deg, #0a2e1a 0%, #1a3a2a 100%)',
@@ -66,21 +66,21 @@ const FEATURED_CARDS = [
     },
     {
         title: 'HackerEarth',
-        username: '@techforeverybody',
+        username: '@Shiva9995',
         description: 'Hackathons & competitive programming',
-        url: 'https://www.hackerearth.com/@techforeverybody',
-        image: 'https://placehold.co/600x280/2b3252/6c7bff?text=HackerEarth+Profile',
+        url: 'https://www.hackerearth.com/@Shiva9995/',
+        image: '/featured/hackerearth.png',
         Icon: SiHackerearth,
         color: '#6c7bff',
         gradient: 'linear-gradient(135deg, #2b3252 0%, #323754 100%)',
         stats: 'Active',
     },
     {
-        title: 'Open Source Project',
-        username: 'AI Developer Tools',
-        description: 'Currently contributing to AI-powered developer tools',
-        url: 'https://github.com/techforeverybody',
-        image: 'https://placehold.co/600x280/061a2e/1693F9?text=Open+Source+Project',
+        title: 'GangaOS',
+        username: '@Shiva995',
+        description: 'A Made in India OS for everyone',
+        url: 'https://gangaos.techforeverybody.org//',
+        image: '/featured/gngaos.png',
         Icon: RocketLaunchOutlined,
         color: C.accent,
         gradient: `linear-gradient(135deg, #061a2e 0%, #0a2540 100%)`,
@@ -106,7 +106,6 @@ const fadeUp = {
 
 export default function FeaturedSection() {
     const ref = useRef<HTMLDivElement>(null)
-    const inView = useInView(ref, { once: true, margin: '-60px' })
 
     return (
         <Box ref={ref} sx={{ py: '28px', px: {
@@ -127,8 +126,6 @@ export default function FeaturedSection() {
                     <motion.div
                         key={card.title}
                         variants={fadeUp}
-                        initial="hidden"
-                        animate={inView ? 'show' : 'hidden'}
                         custom={i}
                     >
                         <Box
