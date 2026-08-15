@@ -1,11 +1,10 @@
-import { Box, Typography, keyframes } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import { SchoolOutlined, EmojiEventsOutlined, CalendarTodayOutlined } from '@mui/icons-material'
 
 const GREEN = '#16a34a'
 const DARK = '#052e16'
 const MINT = '#dcfce7'
 
-const shimmer = keyframes`0%{background-position:-200% 0}100%{background-position:200% 0}`
 
 const EDUCATION_DATA = [
     {

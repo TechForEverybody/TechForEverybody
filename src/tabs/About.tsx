@@ -68,10 +68,7 @@ const popUp = {
     show: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.45, ease: EASE } },
 }
 
-const drawLine = {
-    hidden: { scaleY: 0 },
-    show: { scaleY: 1, transition: { duration: 0.8, ease: EASE, delay: 0.3 } },
-}
+
 
 // ── Animated counter ──────────────────────────────────────────────────────────
 
@@ -239,7 +236,7 @@ export default function About() {
                         gridTemplateColumns: { xs: '1fr 1fr', sm: '1fr 1fr 1fr 1fr' },
                         gap: '6px',
                     }}>
-                        {EXPERTISE.map(({ label, Icon }, i) => (
+                        {EXPERTISE.map(({ label, Icon }) => (
                             <motion.div key={label} variants={popUp}>
                                 <Box
                                     component={motion.div}

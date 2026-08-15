@@ -18,7 +18,6 @@ import { TbApi, TbBrain, TbMessageChatbot, TbNetwork, TbCpu, TbAntenna, TbCode, 
 const ORANGE = '#f97316'
 const INK = '#1a0f06'
 
-const float = keyframes`0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}`
 const glow = keyframes`0%,100%{box-shadow:0 0 8px ${ORANGE}44}50%{box-shadow:0 0 20px ${ORANGE}88}`
 
 interface Skill { name: string; icon: IconType; color: string }
@@ -286,7 +285,7 @@ export default function Skills() {
 
                             {/* Skills as icon chips */}
                             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                                {skills.map(({ name, icon: Icon, color }, sIdx) => (
+                                {skills.map(({ name, icon: Icon, color }) => (
                                     <Box key={name} sx={{
                                         display: 'flex', alignItems: 'center', gap: '6px',
                                         px: '10px', py: '6px', borderRadius: '9px',

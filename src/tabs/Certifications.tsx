@@ -1,4 +1,4 @@
-import { Box, Typography, keyframes } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import { WorkspacePremiumOutlined, StarOutlined, VerifiedOutlined, CodeOutlined, AutoAwesomeOutlined, OpenInNewOutlined } from '@mui/icons-material'
 
 const PINK = '#ec4899'
@@ -6,7 +6,6 @@ const DEEP = '#9d174d'
 const INK = '#1a0a14'
 const WHITE = '#ffffff'
 
-const shimmer = keyframes`0%{background-position:-200% 0}100%{background-position:200% 0}`
 
 const CERT_SECTIONS = [
     {

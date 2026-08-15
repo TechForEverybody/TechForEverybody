@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Box, Typography, keyframes } from '@mui/material'
-import { SendOutlined, LinkedIn, GitHub, AlternateEmailOutlined, PersonOutlined, SubjectOutlined, ChatBubbleOutlineOutlined, RocketLaunchOutlined } from '@mui/icons-material'
+import { SendOutlined, LinkedIn, GitHub, AlternateEmailOutlined, PersonOutlined, SubjectOutlined, ChatBubbleOutlineOutlined } from '@mui/icons-material'
 
 const BLUE = '#2563eb'
 const DEEP = '#172554'
