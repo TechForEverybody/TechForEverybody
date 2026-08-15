@@ -31,16 +31,27 @@ const FEATURED_CARDS = [
         gradient: 'linear-gradient(135deg, #1a1a2e 0%, #2d1f00 100%)',
         stats: '200+ Problems',
     },
+    // {
+    //     title: 'Coursera',
+    //     username: '@techforeverybody',
+    //     description: 'Certifications & professional courses',
+    //     url: 'https://www.coursera.org/learner/techforeverybody',
+    //     image: 'https://placehold.co/600x280/001d3d/0056D2?text=Coursera+Profile',
+    //     Icon: SiCoursera,
+    //     color: '#0056D2',
+    //     gradient: 'linear-gradient(135deg, #001d3d 0%, #003566 100%)',
+    //     stats: '10+ Courses',
+    // },
     {
-        title: 'Coursera',
+        title: 'LinkedIn',
         username: '@techforeverybody',
-        description: 'Certifications & professional courses',
-        url: 'https://www.coursera.org/learner/techforeverybody',
-        image: 'https://placehold.co/600x280/001d3d/0056D2?text=Coursera+Profile',
-        Icon: SiCoursera,
-        color: '#0056D2',
-        gradient: 'linear-gradient(135deg, #001d3d 0%, #003566 100%)',
-        stats: '10+ Courses',
+        description: 'Professional network, experience & connections',
+        url: 'https://www.linkedin.com/in/shiva995/',
+        image: 'https://placehold.co/600x280/0a2540/0A66C2?text=LinkedIn+Profile',
+        Icon: FaLinkedin,
+        color: '#0A66C2',
+        gradient: 'linear-gradient(135deg, #0a2540 0%, #002d5e 100%)',
+        stats: '500+ Connects',
     },
     {
         title: 'HackerRank',
@@ -76,17 +87,6 @@ const FEATURED_CARDS = [
         stats: 'In Progress',
         highlight: true,
     },
-    {
-        title: 'LinkedIn',
-        username: '@techforeverybody',
-        description: 'Professional network, experience & connections',
-        url: 'https://www.linkedin.com/in/techforeverybody',
-        image: 'https://placehold.co/600x280/0a2540/0A66C2?text=LinkedIn+Profile',
-        Icon: FaLinkedin,
-        color: '#0A66C2',
-        gradient: 'linear-gradient(135deg, #0a2540 0%, #002d5e 100%)',
-        stats: '500+ Connects',
-    },
 ]
 
 // ── Animations ───────────────────────────────────────────────────────────────
@@ -117,8 +117,8 @@ export default function FeaturedSection() {
             {/* Cards Grid */}
             <Box sx={{
                 display: 'grid',
-                gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)' },
-                // gap: '12px',
+                gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' },
+                gap: '12px',
                 position: 'relative',
                 marginTop: -15,
 

@@ -14,6 +14,7 @@ import {
 import { motion, useInView, useMotionValue, useSpring } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 import { C } from '../theme'
+import Aurora from '../components/Aurora'
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 
@@ -48,48 +49,28 @@ const EXPERTISE = [
     { label: 'Data Engineering', Icon: Hub },
 ]
 
-// ── Animation variants ────────────────────────────────────────────────────────
+// ── Animation ─────────────────────────────────────────────────────────────────
 
 const EASE: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94]
 
-const fadeUp = {
-    hidden: { opacity: 0, y: 28 },
-    show: (i: number = 0) => ({
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.55, delay: i * 0.08, ease: EASE },
-    }),
+const stagger = {
+    hidden: {},
+    show: { transition: { staggerChildren: 0.07, delayChildren: 0.15 } },
 }
 
-const fadeLeft = {
-    hidden: { opacity: 0, x: -24 },
-    show: (i: number = 0) => ({
-        opacity: 1,
-        x: 0,
-        transition: { duration: 0.5, delay: i * 0.07, ease: EASE },
-    }),
+const slideIn = {
+    hidden: { opacity: 0, x: -30 },
+    show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: EASE } },
 }
 
-// ── Typewriter hook ─────────────────────────────────────────────────────────────
+const popUp = {
+    hidden: { opacity: 0, scale: 0.85, y: 16 },
+    show: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.45, ease: EASE } },
+}
 
-function useTypewriter(text: string, startWhen: boolean, speed = 52) {
-    const [displayed, setDisplayed] = useState('')
-    const [done, setDone] = useState(false)
-
-    useEffect(() => {
-        if (!startWhen) return
-        setDisplayed('')
-        setDone(false)
-        let i = 0
-        const id = setInterval(() => {
-            i++
-            setDisplayed(text.slice(0, i))
-            if (i >= text.length) { clearInterval(id); setDone(true) }
-        }, speed)
-        return () => clearInterval(id)
-    }, [text, startWhen, speed])
-
-    return { displayed, done }
+const drawLine = {
+    hidden: { scaleY: 0 },
+    show: { scaleY: 1, transition: { duration: 0.8, ease: EASE, delay: 0.3 } },
 }
 
 // ── Animated counter ──────────────────────────────────────────────────────────
@@ -109,303 +90,188 @@ function AnimatedCounter({ target, suffix }: { target: number; suffix: string })
         return spring.on('change', v => setDisplay(Math.round(v)))
     }, [spring])
 
-    return (
-        <span ref={ref}>
-            {display}{suffix}
-        </span>
-    )
+    return <span ref={ref}>{display}{suffix}</span>
 }
-
-// ── Sub-components ────────────────────────────────────────────────────────────
-
-function SectionLabel({ children, delay = 0 }: { children: string; delay?: number }) {
-    return (
-        <motion.div
-            variants={fadeLeft}
-            custom={delay}
-            style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14 }}
-        >
-            <Box sx={{ width: 3, height: 13, borderRadius: '2px', background: C.accent, flexShrink: 0 }} />
-            <Typography sx={{
-                fontSize: '0.69rem',
-                fontWeight: 700,
-                color: C.textMuted,
-                letterSpacing: '0.12em',
-                textTransform: 'uppercase',
-            }}>
-                {children}
-            </Typography>
-        </motion.div>
-    )
-}
-
-
-
 
 // ── Component ─────────────────────────────────────────────────────────────────
 
 export default function About() {
     const containerRef = useRef(null)
     const inView = useInView(containerRef, { once: true, margin: '-60px' })
-    const { displayed: typedName, done: typingDone } = useTypewriter('Shivkumar Chauhan', inView, 200)
 
     return (
         <Box
             ref={containerRef}
             sx={{
-                // minHeight: '100vh',
                 mx: 'auto',
                 height: '100%',
-                px: { xs: '20px', sm: '32px', md: '96px' },
-                py: { xs: '50px', sm: '30px', md: '100px' },
+                px: { xs: '16px', sm: '28px', md: '96px' },
+                py: { xs: '40px', sm: '50px', md: '120px' },
+                pt: { xs: '40px', sm: '50px', md: '50px' },
                 position: 'relative',
-                background: "black",
-
+                background: C.bg,
+                overflow: 'hidden',
             }}
         >
+            <Box sx={{ position: 'absolute', inset: 0, zIndex: 0 }}>
+                <Aurora
+                    colorStops={['#ef4444', '#f97316', '#ef4444']}
+                    amplitude={1.2}
+                    blend={0.6}
+                    speed={0.8}
+                />
+            </Box>
+           
 
-            <Box sx={{ position: 'relative', zIndex: 1 }}>
-
-                {/* ── Name ── */}
-                <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    animate={inView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.7, ease: EASE }}
-                >
-                    <Typography
-                        component="div"
-                        sx={{
-                            fontSize: { xs: '2.6rem', sm: '3.8rem', md: '5.2rem' },
-                            fontWeight: 900,
-                            lineHeight: 0.96,
-                            letterSpacing: '-0.04em',
-                            mb: '10px',
-                            background: `linear-gradient(140deg, #ffffff 0%, #d8d8d8 30%, ${C.accent} 65%, #f0f0f0 100%)`,
-                            backgroundSize: '300% 300%',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
-                            animation: 'shimmer 7s ease infinite',
-                            '@keyframes shimmer': {
-                                '0%': { backgroundPosition: '0% 50%' },
-                                '50%': { backgroundPosition: '100% 50%' },
-                                '100%': { backgroundPosition: '0% 50%' },
-                            },
-                        }}
-                    >
-                        {typedName}
-                        <Box
-                            component="span"
-                            sx={{
-                                display: 'inline-block',
-                                width: { xs: '3px', sm: '4px', md: '5px' },
-                                height: { xs: '2.4rem', sm: '3.4rem', md: '4.6rem' },
-                                background: C.accent,
-                                ml: '4px',
-                                verticalAlign: 'middle',
-                                borderRadius: '2px',
-                                animation: typingDone ? 'blink 1.1s step-end infinite' : 'none',
-                                '@keyframes blink': {
-                                    '0%, 100%': { opacity: 1 },
-                                    '50%': { opacity: 0 },
-                                },
-                            }}
-                        />
+            {/* ── Header block ── */}
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, ease: EASE }}
+                style={{ position: 'relative', zIndex: 1 }}
+            >
+                <Box sx={{ display: 'flex', alignItems: 'baseline', gap: '12px', mb: '6px' }}>
+                    <Typography sx={{
+                        fontSize: { xs: '2.2rem', sm: '3rem', md: '4rem' },
+                        fontWeight: 900,
+                        lineHeight: 1,
+                        letterSpacing: '-0.03em',
+                        color: C.text,
+                    }}>
+                        Shivkumar
                     </Typography>
-                </motion.div>
+                    <Typography sx={{
+                        fontSize: { xs: '2.2rem', sm: '3rem', md: '4rem' },
+                        fontWeight: 900,
+                        lineHeight: 1,
+                        letterSpacing: '-0.03em',
+                        color: C.accent,
+                    }}>
+                        Chauhan
+                    </Typography>
+                </Box>
 
-                <motion.div
-                    initial="hidden"
-                    animate={inView ? 'show' : 'hidden'}
-                    style={{ display: 'flex', flexWrap: 'wrap', gap: 7, marginBottom: 40 }}
-                >
+                {/* Role ticker strip */}
+                <Box sx={{
+                    display: 'flex',
+                    gap: '6px',
+                    flexWrap: 'wrap',
+                    mb: '28px',
+                    pl: '2px',
+                }}>
                     {ROLES.map((role, i) => (
-                        <motion.div
+                        <motion.span
                             key={role}
-                            variants={fadeUp}
-                            custom={i * 0.5 + 0.4}
-                            whileHover={{ scale: 1.04, y: -2 }}
-                            transition={{ type: 'spring', stiffness: 300 }}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={inView ? { opacity: 1, y: 0 } : {}}
+                            transition={{ delay: 0.4 + i * 0.08, duration: 0.4, ease: EASE }}
                         >
                             <Box sx={{
-                                px: '10px', py: '4px',
-                                borderRadius: '5px',
-                                background: C.accent,
+                                px: '8px', py: '3px',
                                 border: `1px solid ${C.borderMid}`,
-                                fontSize: '0.75rem',
+                                background: C.surface,
+                                fontSize: '0.7rem',
                                 fontWeight: 600,
-                                color: "white",
-                                letterSpacing: '0.02em',
+                                color: C.textSub,
+                                letterSpacing: '0.01em',
+                                transition: 'all 0.2s',
                                 cursor: 'default',
-                                transition: 'border-color 0.2s',
-                                '&:hover': { borderColor: C.accent + '88', color: C.text },
+                                '&:hover': { background: C.accent, color: '#fff', borderColor: C.accent },
                             }}>
                                 {role}
                             </Box>
-                        </motion.div>
+                        </motion.span>
                     ))}
-                </motion.div>
+                </Box>
+            </motion.div>
 
-                {/* ── Two-column content ── */}
-                <Box sx={{
-                    display: 'grid',
-                    gridTemplateColumns: { xs: '1fr', md: '1fr 300px' },
-                    gap: { xs: '40px', md: '52px' },
-                    mb: '15px',
-                    alignItems: 'start',
-                }}>
-                    {/* Left — Bio */}
-                    <motion.div
-                        initial="hidden"
-                        animate={inView ? 'show' : 'hidden'}
-                    >
-                        <SectionLabel delay={0}>About</SectionLabel>
-                        <Box sx={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-                            {BIO.map((para, i) => (
-                                <motion.div key={i} variants={fadeUp} custom={i + 0.5}>
+            {/* ── Main grid: 3 columns on desktop ── */}
+            <Box sx={{
+                display: 'grid',
+                gridTemplateColumns: { xs: '1fr', md: '2fr 1px 1fr' },
+                gap: { xs: '32px', md: '36px' },
+                alignItems: 'start',
+                position: 'relative',
+                zIndex: 1,
+            }}>
+
+                {/* ── Left: Bio + Expertise ── */}
+                <motion.div
+                    variants={stagger}
+                    initial="hidden"
+                    animate={inView ? 'show' : 'hidden'}
+                >
+                    {/* Bio paragraphs as stacked cards */}
+                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: '10px', mb: '28px' }}>
+                        {BIO.map((para, i) => (
+                            <motion.div key={i} variants={slideIn}>
+                                <Box sx={{
+                                    px: '14px', py: '12px',
+                                    background: C.surface2,
+                                    borderLeft: i === 0 ? `3px solid ${C.accent}` : `3px solid ${C.border}`,
+                                }}>
                                     <Typography sx={{
-                                        fontSize: '0.875rem',
+                                        fontSize: '0.8rem',
                                         color: i === 0 ? C.text : C.textSub,
-                                        lineHeight: 1.8,
+                                        lineHeight: 1.7,
                                         fontWeight: i === 0 ? 500 : 400,
                                     }}>
                                         {para}
                                     </Typography>
-                                </motion.div>
-                            ))}
-                        </Box>
-                    </motion.div>
-
-                    {/* Right — Stats + CTA */}
-                    <motion.div
-                        initial="hidden"
-                        animate={inView ? 'show' : 'hidden'}
-                        style={{ display: 'flex', flexDirection: 'column', gap: 10 }}
-                    >
-                        <SectionLabel delay={0}>At a glance</SectionLabel>
-
-                        {STATS.map(({ value, suffix, label }, i) => (
-                            <motion.div key={label} variants={fadeUp} custom={i + 0.3}>
-                                <Box sx={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'space-between',
-                                    px: '16px', py: '13px',
-                                    borderRadius: '10px',
-                                    background: C.surface2,
-                                    border: `1px solid ${C.border}`,
-                                }}>
-                                    <Typography sx={{ fontSize: '0.8125rem', color: C.textSub, fontWeight: 500 }}>
-                                        {label}
-                                    </Typography>
-                                    <Typography sx={{
-                                        fontSize: '1.125rem',
-                                        fontWeight: 800,
-                                        color: C.accent,
-                                        letterSpacing: '-0.02em',
-                                    }}>
-                                        <AnimatedCounter target={value} suffix={suffix} />
-                                    </Typography>
                                 </Box>
                             </motion.div>
                         ))}
+                    </Box>
 
-                        {/* Divider */}
-                        <motion.div variants={fadeUp} custom={STATS.length + 0.3}>
-                            <Box sx={{ height: '1px', background: C.border, my: '4px' }} />
-                        </motion.div>
-
-                        {/* Resume CTA */}
-                        <motion.div
-                            variants={fadeUp}
-                            custom={STATS.length + 0.6}
-                            whileHover={{ scale: 1.02, y: -2 }}
-                            whileTap={{ scale: 0.97 }}
-                        >
-                            <Box
-                                component="a"
-                                href="#"
-                                sx={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    gap: '7px',
-                                    px: '16px', py: '12px',
-                                    borderRadius: '10px',
-                                    background: `linear-gradient(135deg, ${C.accent} 0%, ${C.accent}cc 100%)`,
-                                    color: '#fff',
-                                    fontWeight: 700,
-                                    fontSize: '0.8125rem',
-                                    letterSpacing: '0.025em',
-                                    textDecoration: 'none',
-                                    boxShadow: `0 4px 20px ${C.accentGlow}, 0 0 0 1px ${C.accent}44`,
-                                    transition: 'box-shadow 0.2s ease',
-                                    position: 'relative',
-                                    overflow: 'hidden',
-                                    '&::before': {
-                                        content: '""',
-                                        position: 'absolute',
-                                        inset: 0,
-                                        background: 'linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%)',
-                                        pointerEvents: 'none',
-                                    },
-                                    '&:hover': {
-                                        boxShadow: `0 8px 32px ${C.accentGlow}, 0 0 0 1px ${C.accent}88`,
-                                    },
-                                }}
-                            >
-                                <Download sx={{ fontSize: 15 }} />
-                                Download Resume
-                                <East sx={{ fontSize: 13 }} />
-                            </Box>
-                        </motion.div>
-                    </motion.div>
-                </Box>
-
-                {/* ── Expertise grid ── */}
-                <motion.div
-                    initial="hidden"
-                    animate={inView ? 'show' : 'hidden'}
-                    style={{ marginTop: 8, marginBottom: 15 }}
-                >
-                    <SectionLabel delay={0}>Expertise</SectionLabel>
+                    {/* Expertise — 2-column compact grid */}
+                    <Typography sx={{
+                        fontSize: '0.65rem',
+                        fontWeight: 700,
+                        color: C.textMuted,
+                        letterSpacing: '0.14em',
+                        textTransform: 'uppercase',
+                        mb: '10px',
+                    }}>
+                        Core Expertise
+                    </Typography>
                     <Box sx={{
                         display: 'grid',
-                        gridTemplateColumns: { xs: 'repeat(2, 1fr)', sm: 'repeat(4, 1fr)' },
-                        gap: '8px',
+                        gridTemplateColumns: { xs: '1fr 1fr', sm: '1fr 1fr 1fr 1fr' },
+                        gap: '6px',
                     }}>
                         {EXPERTISE.map(({ label, Icon }, i) => (
-                            <motion.div
-                                key={label}
-                                variants={fadeUp}
-                                custom={i * 0.4}
-                                whileHover={{ scale: 1.03 }}
-                                transition={{ type: 'spring', stiffness: 280, damping: 18 }}
-                            >
-                                <Box sx={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: '10px',
-                                    px: '14px', py: '12px',
-                                    borderRadius: '10px',
-                                    background: C.accentBright,
-                                    border: `1px solid ${C.border}`,
-                                    cursor: 'default',
-                                    transition: 'all 0.18s ease',
-                                }}>
+                            <motion.div key={label} variants={popUp}>
+                                <Box
+                                    component={motion.div}
+                                    whileHover={{ y: -3, scale: 1.02 }}
+                                    sx={{
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        alignItems: 'center',
+                                        gap: '6px',
+                                        px: '8px', py: '14px',
+                                        borderRadius: '10px',
+                                        background: C.surface,
+                                        border: `1px solid ${C.border}`,
+                                        cursor: 'default',
+                                        transition: 'border-color 0.2s',
+                                        '&:hover': { borderColor: C.accent },
+                                    }}
+                                >
                                     <Box sx={{
-                                        width: 30, height: 30, borderRadius: '7px', flexShrink: 0,
-                                        background: C.accent + '14',
-                                        border: `1px solid ${C.accent}33`,
+                                        width: 32, height: 32,
+                                        borderRadius: '8px',
+                                        background: C.accentBright,
                                         display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                        transition: 'all 0.18s',
                                     }}>
-                                        <Icon sx={{ fontSize: 15, color: "white" }} />
+                                        <Icon sx={{ fontSize: 15, color: '#fff' }} />
                                     </Box>
                                     <Typography sx={{
-                                        fontSize: '0.78rem',
+                                        fontSize: '0.68rem',
                                         fontWeight: 600,
-                                        color: "white",
-                                        lineHeight: 1.3,
+                                        color: C.text,
+                                        textAlign: 'center',
+                                        lineHeight: 1.2,
                                     }}>
                                         {label}
                                     </Typography>
@@ -415,6 +281,109 @@ export default function About() {
                     </Box>
                 </motion.div>
 
+                {/* ── Vertical divider ── */}
+                <Box sx={{
+                    display: { xs: 'none', md: 'block' },
+                    width: '1px',
+                    alignSelf: 'stretch',
+                    background: `linear-gradient(to bottom, transparent, ${C.borderMid}, transparent)`,
+                }} />
+
+                {/* ── Right: Stats + Resume ── */}
+                <motion.div
+                    variants={stagger}
+                    initial="hidden"
+                    animate={inView ? 'show' : 'hidden'}
+                    style={{ display: 'flex', flexDirection: 'column', gap: 14 }}
+                >
+                    {/* Stats as big number blocks */}
+                    {STATS.map(({ value, suffix, label }) => (
+                        <motion.div key={label} variants={slideIn}>
+                            <Box sx={{
+                                px: '16px', py: '16px',
+                                borderRadius: '10px',
+                                background: C.surface,
+                                border: `1px solid ${C.border}`,
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '14px',
+                            }}>
+                                <Typography sx={{
+                                    fontSize: '1.6rem',
+                                    fontWeight: 900,
+                                    color: C.accent,
+                                    lineHeight: 1,
+                                    letterSpacing: '-0.03em',
+                                    minWidth: '52px',
+                                }}>
+                                    <AnimatedCounter target={value} suffix={suffix} />
+                                </Typography>
+                                <Box sx={{ height: '24px', width: '1px', background: C.border }} />
+                                <Typography sx={{
+                                    fontSize: '0.75rem',
+                                    fontWeight: 500,
+                                    color: C.textSub,
+                                }}>
+                                    {label}
+                                </Typography>
+                            </Box>
+                        </motion.div>
+                    ))}
+
+                    {/* Resume button */}
+                    <motion.div variants={slideIn}>
+                        <Box
+                            component={motion.a}
+                            href="#"
+                            whileHover={{ scale: 1.03, y: -2 }}
+                            whileTap={{ scale: 0.97 }}
+                            sx={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                gap: '8px',
+                                mt: '8px',
+                                px: '16px', py: '13px',
+                                borderRadius: '10px',
+                                background: C.accent,
+                                color: '#fff',
+                                fontWeight: 700,
+                                fontSize: '0.8rem',
+                                letterSpacing: '0.02em',
+                                textDecoration: 'none',
+                                boxShadow: `0 4px 24px ${C.accentGlow}`,
+                                transition: 'box-shadow 0.2s',
+                                '&:hover': { boxShadow: `0 8px 36px ${C.accentGlow}` },
+                            }}
+                        >
+                            <Download sx={{ fontSize: 15 }} />
+                            Download Resume
+                            <East sx={{ fontSize: 13 }} />
+                        </Box>
+                    </motion.div>
+
+                    {/* Decorative code snippet */}
+                    <motion.div variants={popUp}>
+                        <Box sx={{
+                            mt: '6px',
+                            px: '12px', py: '10px',
+                            borderRadius: '8px',
+                            background: C.surface2,
+                            border: `1px solid ${C.border}`,
+                            fontFamily: 'monospace',
+                            fontSize: '0.65rem',
+                            color: C.textSub,
+                            lineHeight: 1.8,
+                            overflow: 'hidden',
+                        }}>
+                            <Box component="span" sx={{ color: C.accent }}>const</Box> engineer = {'{'}<br />
+                            &nbsp;&nbsp;name: <Box component="span" sx={{ color: '#4ade80' }}>"Shivkumar"</Box>,<br />
+                            &nbsp;&nbsp;focus: <Box component="span" sx={{ color: '#4ade80' }}>"AI + Full Stack"</Box>,<br />
+                            &nbsp;&nbsp;building: <Box component="span" sx={{ color: C.accent }}>true</Box><br />
+                            {'}'};
+                        </Box>
+                    </motion.div>
+                </motion.div>
             </Box>
         </Box>
     )
