@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { SiLeetcode, SiHackerrank,  SiHackerearth } from 'react-icons/si'
 import { RocketLaunchOutlined,  NorthEast } from '@mui/icons-material'
-import { motion, useInView } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useRef } from 'react'
 import { C } from '../theme'
 

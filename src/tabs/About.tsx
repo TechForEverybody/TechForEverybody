@@ -1,13 +1,9 @@
 import { Box, Typography } from '@mui/material'
 import {
     Code,
-    Storage,
-    Android,
     AutoAwesome,
     Cloud,
     Shield,
-    Computer,
-    Hub,
     East,
     Download,
 } from '@mui/icons-material'
@@ -63,6 +59,7 @@ const popUp = {
 
 // ── Animated counter ──────────────────────────────────────────────────────────
 
+// @ts-expect-error kept for future use
 function AnimatedCounter({ target, suffix }: { target: number; suffix: string }) {
     const ref = useRef<HTMLSpanElement>(null)
     const inView = useInView(ref, { once: true, margin: '-40px' })
